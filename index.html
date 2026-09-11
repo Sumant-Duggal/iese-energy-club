@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IESE Energy Club — Get fluent in the world's most important industry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E0E0E;
+    --paper:#FFFFFF;
+    --mist:#EEF4F8;
+    --sky:#BEDCF0;
+    --sun-wash:#FFF3D6;
+    --solar:#FFC93C;
+    --solar-2:#FFB01F;
+    --ember:#FF6A2B;
+    --electric:#2D7DD2;
+    --shadow:6px 6px 0 var(--ink);
+    --shadow-sm:4px 4px 0 var(--ink);
+    --radius:22px;
+    --maxw:1140px;
+    --disp:"Bricolage Grotesque",system-ui,sans-serif;
+    --body:"Hanken Grotesk",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);
+    font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:1.02;letter-spacing:-0.02em;margin:0}
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--disp);font-weight:700;font-size:.95rem;color:var(--electric);margin-bottom:14px}
+
+  /* ---- buttons ---- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;font-family:var(--disp);font-weight:700;
+    font-size:1.02rem;text-decoration:none;padding:14px 24px;border-radius:100px;
+    border:2.5px solid var(--ink);background:var(--solar);color:var(--ink);
+    box-shadow:var(--shadow-sm);transition:transform .12s ease, box-shadow .12s ease;cursor:pointer;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+  .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .btn--ghost{background:var(--paper)}
+  .btn--ember{background:var(--ember);color:var(--paper)}
+  .btn--lg{font-size:1.15rem;padding:17px 30px}
+  a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--electric);outline-offset:3px}
+
+  /* ---- nav ---- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);
+    backdrop-filter:blur(8px);border-bottom:2.5px solid var(--ink)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:20px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:800;
+    font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+  .brand .mark{width:30px;height:33px;flex:none}
+  .nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
+  .nav-links a{font-family:var(--disp);font-weight:500;text-decoration:none;font-size:1rem}
+  .nav-links a.plain:hover{color:var(--electric)}
+  .nav-toggle{display:none;margin-left:auto;background:none;border:2.5px solid var(--ink);
+    border-radius:10px;padding:8px 10px;font-size:1.1rem;line-height:1;cursor:pointer}
+
+  /* ---- hero ---- */
+  .hero{position:relative;overflow:hidden;background:
+    linear-gradient(180deg,var(--sky) 0%, #E4F0FA 46%, var(--paper) 100%);
+    border-bottom:2.5px solid var(--ink)}
+  .hero::before{content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle, rgba(14,14,14,.20) 1.6px, transparent 1.8px);
+    background-size:9px 9px;
+    -webkit-mask-image:linear-gradient(180deg,#000 0%, rgba(0,0,0,.35) 55%, transparent 85%);
+    mask-image:linear-gradient(180deg,#000 0%, rgba(0,0,0,.35) 55%, transparent 85%);
+    pointer-events:none}
+  .hero-inner{position:relative;z-index:2;max-width:920px;margin:0 auto;
+    padding:96px 24px 110px;text-align:center}
+  .hero .tag{font-family:var(--disp);font-weight:700;font-size:1rem;
+    background:var(--paper);border:2.5px solid var(--ink);border-radius:100px;
+    padding:7px 18px;display:inline-block;margin-bottom:26px;box-shadow:var(--shadow-sm)}
+  .hero h1{font-size:clamp(2.6rem,7vw,5.1rem)}
+  .hero .sub{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:640px;margin:26px auto 0;color:#1a1a1a}
+  .hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+  .cube{position:absolute;bottom:-38px;z-index:1;width:clamp(150px,20vw,258px);height:auto;filter:drop-shadow(3px 5px 0 rgba(14,14,14,.14))}
+  .cube--l{left:-46px;transform:rotate(-4deg)}
+  .cube--r{right:-52px;transform:rotate(6deg)}
+
+  /* ---- stats band ---- */
+  .stats{background:var(--ink);color:var(--paper);border-bottom:2.5px solid var(--ink)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+    max-width:var(--maxw);margin:0 auto;padding:44px 24px}
+  .stat{padding:6px 14px;border-left:2px solid #333}
+  .stat:first-child{border-left:none}
+  .stat .num{font-family:var(--disp);font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);
+    line-height:1;color:var(--solar)}
+  .stat:nth-child(2) .num{color:var(--ember)}
+  .stat:nth-child(3) .num{color:#7FB8EE}
+  .stat:nth-child(4) .num{color:var(--solar)}
+  .stat .lbl{font-size:.98rem;color:#cfcfcf;margin-top:8px}
+
+  /* ---- section scaffolding ---- */
+  section{padding:88px 0}
+  .sec-head{max-width:720px;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem)}
+  .sec-head p{margin-top:16px;color:#333;font-size:1.12rem}
+
+  /* who-we-are split */
+  .about{background:var(--mist);border-bottom:2.5px solid var(--ink)}
+  .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:start}
+  .about-grid h2{font-size:clamp(2.1rem,4.6vw,3.2rem)}
+  .about-body p{margin-bottom:18px;font-size:1.1rem;color:#222}
+  .about-body p:last-child{margin-bottom:0}
+  .pull{font-family:var(--disp);font-weight:700;font-size:1.35rem;line-height:1.2;
+    border-left:5px solid var(--ember);padding-left:18px;color:var(--ink)}
+
+  /* what we do */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow)}
+  .card .ic{width:52px;height:52px;border:2.5px solid var(--ink);border-radius:14px;
+    display:grid;place-items:center;margin-bottom:20px}
+  .card:nth-child(1) .ic{background:var(--solar)}
+  .card:nth-child(2) .ic{background:var(--electric)}
+  .card:nth-child(3) .ic{background:var(--ember)}
+  .card .ic svg{width:26px;height:26px;stroke:var(--ink);stroke-width:2.4;fill:none;
+    stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.42rem;margin-bottom:10px}
+  .card p{color:#333;font-size:1.03rem}
+
+  /* events */
+  .events{background:var(--sun-wash);border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink)}
+  .ged{background:var(--ink);color:var(--paper);border-radius:var(--radius);
+    padding:40px;box-shadow:var(--shadow);position:relative;overflow:hidden;margin-bottom:22px}
+  .ged .flag{font-family:var(--disp);font-weight:700;color:var(--solar);font-size:1rem;margin-bottom:14px}
+  .ged h3{font-size:clamp(1.9rem,4.4vw,2.9rem);max-width:15ch}
+  .ged .theme{font-family:var(--disp);font-weight:700;font-size:1.25rem;color:var(--ember);margin-top:8px}
+  .ged p{color:#dcdcdc;max-width:60ch;margin-top:16px;font-size:1.06rem}
+  .ged .date{display:inline-flex;align-items:center;gap:10px;margin-top:24px;
+    background:var(--solar);color:var(--ink);border-radius:100px;padding:9px 20px;
+    font-family:var(--disp);font-weight:700}
+  .ged .cube{position:absolute;right:-30px;bottom:-70px;width:230px;opacity:.9}
+  .ev-row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .ev{background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow-sm)}
+  .ev h4{font-family:var(--disp);font-weight:700;font-size:1.3rem;margin:0 0 8px}
+  .ev p{color:#333;font-size:1.02rem}
+
+  /* why join */
+  .join-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .benefits{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .benefits li{display:flex;gap:14px;align-items:flex-start;font-size:1.08rem}
+  .benefits .dot{flex:none;width:26px;height:26px;border-radius:50%;background:var(--solar);
+    border:2.5px solid var(--ink);display:grid;place-items:center;margin-top:2px}
+  .benefits .dot svg{width:14px;height:14px;stroke:var(--ink);stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .no-expert{background:var(--electric);color:var(--paper);border:2.5px solid var(--ink);
+    border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+  .no-expert h3{font-size:1.7rem;line-height:1.1}
+  .no-expert p{margin-top:14px;font-size:1.06rem;color:#eaf3fb}
+
+  /* final CTA */
+  .cta-band{background:var(--solar);border-top:2.5px solid var(--ink);position:relative;overflow:hidden}
+  .cta-band .wrap{padding:80px 24px;text-align:center;position:relative;z-index:2}
+  .cta-band h2{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+  .cta-band p{max-width:52ch;margin:18px auto 0;font-size:1.14rem}
+  .cta-band .cube{bottom:-90px;left:-40px;width:220px;opacity:.55}
+
+  /* footer */
+  footer{background:var(--ink);color:#d7d7d7;padding:56px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+  footer .brand{color:var(--paper)}
+  footer h5{font-family:var(--disp);font-weight:700;color:var(--paper);font-size:1rem;margin:0 0 14px}
+  footer a{color:#cfcfcf;text-decoration:none;display:block;margin-bottom:9px;font-size:.98rem}
+  footer a:hover{color:var(--solar)}
+  .foot-about{max-width:34ch;font-size:.98rem;margin-top:16px;color:#bdbdbd}
+  .socials{display:flex;gap:12px;margin-top:18px}
+  .socials a{display:grid;place-items:center;width:40px;height:40px;border:2px solid #3a3a3a;
+    border-radius:10px;margin:0}
+  .socials a:hover{border-color:var(--solar);background:#1a1a1a}
+  .socials svg{width:20px;height:20px;fill:#cfcfcf}
+  .socials a:hover svg{fill:var(--solar)}
+  .foot-bottom{border-top:1px solid #2a2a2a;margin-top:40px;padding-top:22px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.9rem;color:#9a9a9a}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px)}
+  .reveal.in{opacity:1;transform:none;transition:opacity .6s ease, transform .6s ease}
+
+  /* ---- responsive ---- */
+  @media(max-width:900px){
+    .nav-links{position:fixed;inset:66px 0 auto 0;background:var(--paper);flex-direction:column;
+      align-items:stretch;gap:0;border-bottom:2.5px solid var(--ink);padding:8px 24px 18px;
+      margin:0;display:none}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0;border-bottom:1px solid #eee}
+    .nav-links .btn{margin-top:12px;justify-content:center}
+    .nav-toggle{display:block}
+    .about-grid{grid-template-columns:1fr;gap:28px}
+    .join-grid{grid-template-columns:1fr;gap:32px}
+    .cards{grid-template-columns:1fr}
+    .ev-row{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:24px 8px}
+    .stat:nth-child(3){border-left:none}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    section{padding:64px 0}
+  }
+  @media(max-width:520px){
+    .hero-inner{padding:70px 20px 90px}
+    .ged{padding:28px}
+    .ged .cube{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .btn,.btn:hover,.btn:active{transition:none;transform:none}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- cube symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="cube" viewBox="0 0 200 210">
+<clipPath id="shieldClip"><path d="M24,44 Q24,16 52,16 H148 Q176,16 176,44 V118 Q176,176 100,198 Q24,176 24,118 Z"/></clipPath>
+<g clip-path="url(#shieldClip)">
+<rect x="0" y="0" width="100" height="107" fill="var(--solar)"/>
+<rect x="100" y="0" width="100" height="107" fill="var(--electric)"/>
+<rect x="0" y="107" width="100" height="103" fill="var(--paper)"/>
+<rect x="100" y="107" width="100" height="103" fill="var(--solar)"/>
+<g stroke="#0E0E0E" stroke-width="6" stroke-linecap="round">
+<line x1="44" y1="30" x2="44" y2="96"/><line x1="60" y1="30" x2="60" y2="96"/><line x1="76" y1="30" x2="76" y2="96"/>
+</g>
+<g stroke="#0E0E0E" stroke-width="6" stroke-linecap="round">
+<line x1="120" y1="120" x2="120" y2="180"/><line x1="136" y1="120" x2="136" y2="184"/><line x1="152" y1="120" x2="152" y2="174"/>
+</g>
+<g fill="var(--solar)" stroke="#0E0E0E" stroke-width="3">
+<circle cx="148" cy="48" r="15"/><circle cx="148" cy="84" r="15"/>
+</g>
+<path d="M72,116 L46,152 L60,152 L48,190 L84,146 L68,146 L80,116 Z" fill="var(--ember)" stroke="#0E0E0E" stroke-width="3" stroke-linejoin="round"/>
+<g stroke="#0E0E0E" stroke-width="3.4">
+<line x1="100" y1="16" x2="100" y2="192"/><line x1="24" y1="107" x2="176" y2="107"/>
+</g>
+</g>
+<path d="M24,44 Q24,16 52,16 H148 Q176,16 176,44 V118 Q176,176 100,198 Q24,176 24,118 Z" fill="none" stroke="#0E0E0E" stroke-width="4" stroke-linejoin="round"/>
+</symbol>
+</defs></svg>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+      IESE Energy Club
+    </a>
+    <nav class="nav-links" id="menu">
+      <a class="plain" href="#about">Who we are</a>
+      <a class="plain" href="#do">What we do</a>
+      <a class="plain" href="#events">Events</a>
+      <a class="plain" href="#join">Join</a>
+      <a class="btn" href="https://groups.iese.edu/Energy/club_signup">Join the club</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <svg class="cube cube--l" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+  <svg class="cube cube--r" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+  <div class="hero-inner">
+    <span class="tag">Student-run at IESE Barcelona since 2006</span>
+    <h1>Get fluent in the world's most important industry.</h1>
+    <p class="sub">The IESE Energy Club is where MBAs learn how energy markets really work, meet the people building the transition, and turn curiosity into a career.</p>
+    <div class="cta-row">
+      <a class="btn btn--lg" href="https://groups.iese.edu/Energy/club_signup">Join the club</a>
+      <a class="btn btn--ghost btn--lg" href="#events">See Global Energy Day</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" style="padding:0">
+  <div class="stats-grid">
+    <div class="stat"><div class="num">57</div><div class="lbl">Members</div></div>
+    <div class="stat"><div class="num">15</div><div class="lbl">Officers</div></div>
+    <div class="stat"><div class="num">262</div><div class="lbl">Events hosted</div></div>
+    <div class="stat"><div class="num">392</div><div class="lbl">Newsletters sent</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid reveal">
+    <div>
+      <h2>Who we are</h2>
+    </div>
+    <div class="about-body">
+      <p>Founded in 2006 by students from oil &amp; gas, utilities, and outside the sector entirely, we've kept that mix at the heart of our culture ever since. Some of us arrive as engineers; most arrive curious.</p>
+      <p class="pull">Energy is one of the most prominent industries going through a major transformation — and it's wide open to MBA profiles.</p>
+      <p>Our mission is to develop the next generation of energy leaders at IESE through career support, hands-on learning, and real connections with the people who run the industry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="do">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Three things, done well.</h2>
+      <p>Our priorities for the year map to how members actually get value: understand the sector, meet the right people, and land the role.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H4z"/><path d="M4 17l8-5 8 5"/><path d="M12 3v4"/></svg></div>
+        <h3>Learn</h3>
+        <p>Knowledge sessions and hands-on learning that make a fast-changing, complex sector make sense. No prior energy background required.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.4"/><path d="M3 19c0-3 2.5-4.5 5-4.5s5 1.5 5 4.5"/><path d="M14.5 19c0-2.2 1.5-3.4 3.2-3.4S21 16.8 21 19"/></svg></div>
+        <h3>Connect</h3>
+        <p>Meet students, alumni, and industry practitioners who share a serious interest in the energy transition — on campus and off.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/><path d="M12 4V2"/></svg></div>
+        <h3>Recruit</h3>
+        <p>On- and off-campus recruiting support, treks, and company visits to help you land internships and full-time roles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Events</div>
+      <h2>Where it all happens.</h2>
+    </div>
+
+    <div class="ged reveal">
+      <svg class="cube" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+      <div class="flag">Our flagship</div>
+      <h3>Global Energy Day 2026</h3>
+      <div class="theme">Wired &amp; Woven</div>
+      <p>A half-day conference bringing industry leaders to campus for panels on where energy is heading. This year's thesis: energy has left the energy sector — it's now a board-level question across consulting, finance, tech, and industry.</p>
+      <span class="date">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+        November 25, 2026 · IESE Barcelona
+      </span>
+    </div>
+
+    <div class="ev-row">
+      <div class="ev reveal">
+        <h4>Treks &amp; company visits</h4>
+        <p>Get inside energy companies in and outside Barcelona — see the work up close and build relationships that outlast the visit.</p>
+      </div>
+      <div class="ev reveal">
+        <h4>Club intro &amp; welcome</h4>
+        <p>The best on-ramp for prospective and new members. Meet the community, see the year ahead, and find where you fit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN / WHY -->
+<section id="join">
+  <div class="wrap join-grid">
+    <div class="reveal">
+      <div class="eyebrow">Why join</div>
+      <h2 style="font-size:clamp(2rem,4.4vw,3rem)">What you get.</h2>
+      <ul class="benefits" style="margin-top:26px">
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg></span> Free network events with peers and sector practitioners.</li>
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg></span> Special discounts for conferences and workshops.</li>
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg></span> A mentorship program to guide your recruiting.</li>
+      </ul>
+    </div>
+    <div class="no-expert reveal">
+      <h3>You don't need to be a sector expert.</h3>
+      <p>Passion and curiosity lead the way. Want to do more than attend? Become a 1st-Year Director and help run the club — applications open during the year, so reach out if you're interested.</p>
+      <a class="btn btn--ghost" style="margin-top:22px" href="https://groups.iese.edu/energy/contact-us/">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-band" style="padding:0">
+  <svg class="cube" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+  <div class="wrap reveal">
+    <h2>Ready to plug in?</h2>
+    <p>Join a community that's serious about energy and generous with its network. It takes two minutes.</p>
+    <div class="cta-row" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+      <a class="btn btn--ember btn--lg" href="https://groups.iese.edu/Energy/club_signup">Join the club</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="mark" viewBox="0 0 200 210" aria-hidden="true"><use href="#cube"/></svg>
+          IESE Energy Club
+        </a>
+        <p class="foot-about">A student-run club at IESE Business School, Barcelona. Developing the next generation of energy leaders since 2006.</p>
+        <div class="socials">
+          <a href="https://es.linkedin.com/company/iese-energy-club" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
+          <a href="https://www.instagram.com/iese_energy_club/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3 0 4.1.06 1.1.05 1.8.24 2.4.5.7.27 1.3.63 1.9 1.2.6.6.9 1.2 1.2 1.9.26.6.45 1.3.5 2.4C22.99 9 23 9.3 23 12s0 3-.06 4.1c-.05 1.1-.24 1.8-.5 2.4-.27.7-.63 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.6.26-1.3.45-2.4.5C15 22.99 14.7 23 12 23s-3 0-4.1-.06c-1.1-.05-1.8-.24-2.4-.5a5.2 5.2 0 01-1.9-1.2 5.2 5.2 0 01-1.2-1.9c-.26-.6-.45-1.3-.5-2.4C1.01 15 1 14.7 1 12s0-3 .06-4.1c.05-1.1.24-1.8.5-2.4.27-.7.63-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.6-.26 1.3-.45 2.4-.5C9 2.01 9.3 2 12 2zm0 2c-2.65 0-2.96.01-4 .06-.87.04-1.34.19-1.65.31-.42.16-.72.36-1.03.67-.31.31-.51.61-.67 1.03-.12.31-.27.78-.31 1.65C4.01 9.04 4 9.35 4 12s.01 2.96.06 4c.04.87.19 1.34.31 1.65.16.42.36.72.67 1.03.31.31.61.51 1.03.67.31.12.78.27 1.65.31 1.04.05 1.35.06 4 .06s2.96-.01 4-.06c.87-.04 1.34-.19 1.65-.31.42-.16.72-.36 1.03-.67.31-.31.51-.61.67-1.03.12-.31.27-.78.31-1.65.05-1.04.06-1.35.06-4s-.01-2.96-.06-4c-.04-.87-.19-1.34-.31-1.65a2.8 2.8 0 00-.67-1.03 2.8 2.8 0 00-1.03-.67c-.31-.12-.78-.27-1.65-.31C14.96 4.01 14.65 4 12 4zm0 3.4a4.6 4.6 0 110 9.2 4.6 4.6 0 010-9.2zm0 2a2.6 2.6 0 100 5.2 2.6 2.6 0 000-5.2zm4.8-2.55a1.08 1.08 0 110 2.15 1.08 1.08 0 010-2.15z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="https://groups.iese.edu/energy/home/">Home</a>
+        <a href="#do">What we do</a>
+        <a href="#events">Events</a>
+        <a href="#join">Why join</a>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <a href="https://groups.iese.edu/energy/leadership-team/">Leadership team</a>
+        <a href="https://groups.iese.edu/energy/contact-us/">Contact us</a>
+        <a href="https://groups.iese.edu/Energy/club_signup">Become a member</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 IESE Energy Club</span>
+      <span>IESE Business School · Barcelona</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  var t=document.getElementById('navToggle'), m=document.getElementById('menu');
+  t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open);
+    t.textContent=open?'✕':'☰';
+  });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A'){m.classList.remove('open');t.textContent='☰';t.setAttribute('aria-expanded','false');} });
+
+  // one gentle scroll reveal
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+</script>
+</body>
+</html>
