@@ -137,3 +137,23 @@
 .staged-card-hero .hero-card-system{opacity:clamp(0,calc((var(--p) - .45)*7),1);transform:none;pointer-events:auto}
 .staged-card-hero .hero-card-help{opacity:clamp(0,calc((var(--p) - .54)*8),1)}
 @media(max-width:800px){.staged-card-hero .hero-card-system{transform:none}}
+
+/* Revision: second card design fades in at a reduced scale */
+.staged-card-hero .hero-card-system{
+  opacity:clamp(0,calc((var(--p) - .45)*6),1);
+  transform:scale(.72);
+  transform-origin:center center;
+  transition:opacity .18s linear;
+}
+.staged-card-hero .hero-card-stack,.staged-card-hero .hero-card{
+  width:min(62vw,560px);
+  height:min(38vw,350px);
+  max-height:50vh;
+}
+.staged-card-hero .hero-card{min-height:220px}
+.staged-card-hero .hero-card-help{opacity:clamp(0,calc((var(--p) - .58)*7),1)}
+@media(max-width:800px){
+  .staged-card-hero .hero-card-system{transform:scale(.78)}
+  .staged-card-hero .hero-card-stack,.staged-card-hero .hero-card{width:min(84vw,430px);height:54vh;max-height:410px}
+  .staged-card-hero .hero-card{min-height:330px}
+}
