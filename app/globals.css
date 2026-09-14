@@ -132,3 +132,8 @@
 .staged-card-hero .scroll-cue{opacity:clamp(0,calc(1 - var(--p)*7),1)}
 @media(max-width:800px){.staged-card-hero.hero-scene{height:430svh}.staged-card-hero .hero-title{left:20px;right:20px;top:24%;font-size:13vw}.staged-card-hero .mission p{font-size:clamp(24px,4.3vw,31px);max-width:76vw}.staged-card-hero .hero-card-system{transform:translateY(calc((1 - clamp(0,calc((var(--p) - .74)*7),1))*18vh)) scale(calc(.78 + clamp(0,calc((var(--p) - .74)*7),1)*.22))}}
 @media(prefers-reduced-motion:reduce){.staged-card-hero.hero-scene{height:auto}.staged-card-hero .hero-stage{height:auto;min-height:180svh;position:relative}.staged-card-hero .hero-title,.staged-card-hero .mission,.staged-card-hero .hero-card-system{opacity:1;transform:none}.staged-card-hero .hero-card-system{position:relative;min-height:80svh}.staged-card-hero .hero-stage::after{transform:none}}
+
+/* Revision: cards begin with lime field and keep original carousel scale */
+.staged-card-hero .hero-card-system{opacity:clamp(0,calc((var(--p) - .45)*7),1);transform:none;pointer-events:auto}
+.staged-card-hero .hero-card-help{opacity:clamp(0,calc((var(--p) - .54)*8),1)}
+@media(max-width:800px){.staged-card-hero .hero-card-system{transform:none}}
