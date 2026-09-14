@@ -52,3 +52,42 @@
  .collage-0{width:18vw}.collage-1{left:-4%;width:17vw}.collage-2{width:21vw}.collage-3{right:-4%;width:18vw}.collage-4{right:-5%;width:15vw}.collage-5{right:5%;width:21vw}.collage-6{width:20vw}.collage-7{left:-5%;width:16vw}.collage-8{right:-4%;width:16vw}
 }
 
+/* Original comparison pass: keep the mission statement compact and let the
+   collage read as a perimeter, even while media is still placeholder-only. */
+.hero-emblem{opacity:clamp(0,calc((var(--p) - .6)*7),.62)}
+.mission p{font-size:clamp(28px,3.35vw,56px);line-height:1.08;max-width:min(880px,76vw)}
+.collage.empty-media,.collage .empty-media{background:linear-gradient(135deg,#4c5048,#2d312c)}
+.collage .media-label{color:#d9ddcf40}
+.collage .media-label span:not(.media-cross),.collage .media-label small{display:none}
+.collage .media-cross{font-size:24px;opacity:.34}
+.collage .media-label::before,.collage .media-label::after{border-color:#ffffff45}
+
+@media(max-width:800px){
+ .mission p{font-size:clamp(24px,4.3vw,31px);line-height:1.08;max-width:76vw}
+ .hero-emblem{opacity:clamp(0,calc((var(--p) - .61)*7),.55);transform:translate(-50%,-50%) scale(4.2) rotate(calc(var(--p)*110deg))}
+ .collage-item{height:11vh}
+ .collage-0{left:-12%;top:-3%;width:31vw}
+ .collage-1{left:-9%;top:22%;width:20vw}
+ .collage-2{left:43%;top:-2%;width:20vw}
+ .collage-3{right:-11%;top:21%;width:19vw}
+ .collage-4{right:-12%;top:44%;width:16vw}
+ .collage-5{right:-2%;bottom:-4%;width:24vw}
+ .collage-6{left:14%;bottom:-5%;width:26vw}
+ .collage-7{left:-12%;bottom:15%;width:22vw}
+ .collage-8{right:-12%;top:69%;width:19vw}
+}
+
+@media(min-width:451px) and (max-width:800px){
+ .mission p{font-size:clamp(24px,4vw,28px);max-width:74vw}
+ .mission p>span{display:block}
+ .collage-0{left:-11%;width:24vw}
+ .collage-1{left:-8%;width:17vw}
+ .collage-2{left:43%;width:18vw}
+ .collage-3{right:-9%;width:16vw}
+ .collage-4{right:-10%;width:14vw}
+ .collage-5{right:0;width:20vw}
+ .collage-6{left:14%;width:22vw}
+ .collage-7{left:-10%;width:18vw}
+ .collage-8{right:-10%;width:16vw}
+}
+
