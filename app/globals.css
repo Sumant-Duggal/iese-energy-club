@@ -193,3 +193,40 @@
   .hero-scene .collage-6{left:34.5%!important;bottom:3%!important}
   .hero-scene .collage-7{right:3%!important;bottom:3%!important}
 }
+
+/* User-marked settled placement: eight cards spaced around the IESE mark. */
+.hero-scene .collage-item{
+  width:clamp(180px,13.5vw,230px)!important;
+  height:clamp(92px,7.8vw,128px)!important;
+}
+.hero-scene .collage-0{left:5.1%!important;top:13.2%!important;--shift:170px}
+.hero-scene .collage-1{left:39.6%!important;top:14.8%!important;--shift:-130px}
+.hero-scene .collage-2{right:8.0%!important;top:10.2%!important;--shift:210px}
+.hero-scene .collage-3{left:20.5%!important;top:40.3%!important;--shift:-210px}
+.hero-scene .collage-4{right:24.2%!important;top:41.4%!important;--shift:180px}
+.hero-scene .collage-5{left:8.4%!important;bottom:15.3%!important;--shift:-160px}
+.hero-scene .collage-6{left:41.0%!important;bottom:12.2%!important;--shift:145px}
+.hero-scene .collage-7{right:11.8%!important;bottom:14.4%!important;--shift:-190px}
+.hero-scene .collage-8,
+.hero-scene .collage-9,
+.hero-scene .collage-10,
+.hero-scene .collage-11,
+.hero-scene .collage-12,
+.hero-scene .collage-13{
+  opacity:clamp(0,calc((.78 - var(--p))*8),1)!important;
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero-scene .collage-item{
+    width:clamp(132px,31vw,185px)!important;
+    height:clamp(78px,16vw,112px)!important;
+  }
+  .hero-scene .collage-0{left:3.5%!important;top:12.5%!important}
+  .hero-scene .collage-1{left:37.5%!important;top:14.5%!important}
+  .hero-scene .collage-2{right:3.5%!important;top:11.5%!important}
+  .hero-scene .collage-3{left:13.5%!important;top:39.5%!important}
+  .hero-scene .collage-4{right:13.5%!important;top:40.8%!important}
+  .hero-scene .collage-5{left:4.0%!important;bottom:14.0%!important}
+  .hero-scene .collage-6{left:37.5%!important;bottom:12.0%!important}
+  .hero-scene .collage-7{right:4.0%!important;bottom:13.5%!important}
+}
