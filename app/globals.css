@@ -90,3 +90,8 @@
 .header .wordmark,.header .menu-toggle{mix-blend-mode:difference;color:white}
 .header .brand-mark{mix-blend-mode:normal;color:initial}
 .brand-mark .header-logo{filter:none!important;mix-blend-mode:normal}
+
+/* Lime mission replacement: red line IESE mark. */
+.mission.mission-logo{gap:0}
+.mission.mission-logo img{width:clamp(92px,14vw,190px);height:auto;display:block;object-fit:contain;mix-blend-mode:normal;filter:none}
+@media(max-width:800px){.mission.mission-logo img{width:clamp(86px,24vw,140px)}}
