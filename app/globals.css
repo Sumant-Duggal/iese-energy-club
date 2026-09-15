@@ -124,3 +124,23 @@
 .hero-scene .collage-item{width:clamp(175px,23vw,285px)!important;height:clamp(108px,14.5vh,168px)!important}
 .hero-scene .collage-0{left:3%!important;top:5%!important}.hero-scene .collage-1{left:4%!important;top:31%!important}.hero-scene .collage-2{left:39%!important;top:6%!important}.hero-scene .collage-3{right:4%!important;top:22%!important}.hero-scene .collage-4{right:8%!important;top:50%!important}.hero-scene .collage-5{right:14%!important;bottom:5%!important}.hero-scene .collage-6{left:8%!important;bottom:6%!important}.hero-scene .collage-7{left:39%!important;bottom:1%!important}.hero-scene .collage-8{left:5%!important;top:56%!important}.hero-scene .collage-9{right:5%!important;bottom:23%!important}.hero-scene .collage-10{left:25%!important;bottom:18%!important}.hero-scene .collage-11{right:7%!important;top:3%!important}.hero-scene .collage-12{left:37%!important;top:26%!important}.hero-scene .collage-13{right:31%!important;bottom:9%!important}
 @media(max-width:800px){.hero-scene .collage-item{width:clamp(150px,29vw,230px)!important;height:clamp(92px,13vh,132px)!important}.hero-scene .collage-0{left:4%!important;top:4%!important}.hero-scene .collage-1{left:3%!important;top:29%!important}.hero-scene .collage-2{left:39%!important;top:4%!important}.hero-scene .collage-3{right:3%!important;top:22%!important}.hero-scene .collage-4{right:5%!important;top:48%!important}.hero-scene .collage-5{right:7%!important;bottom:5%!important}.hero-scene .collage-6{left:7%!important;bottom:7%!important}.hero-scene .collage-7{left:37%!important;bottom:0!important}.hero-scene .collage-8{left:4%!important;top:55%!important}.hero-scene .collage-9{right:4%!important;bottom:24%!important}.hero-scene .collage-10{left:25%!important;bottom:20%!important}.hero-scene .collage-11{right:7%!important;top:2%!important}.hero-scene .collage-12{left:37%!important;top:27%!important}.hero-scene .collage-13{right:29%!important;bottom:9%!important}}
+
+/* Fine tune requested frame: smaller static IESE mark, wider non-overlapping collage cards, smaller centered arrows. */
+.hero-iese-outline{
+  width:clamp(56px,7vw,92px)!important;
+  transform:translate(-50%,-50%)!important;
+  opacity:clamp(0,calc((var(--p) - .36)*8),1)!important;
+}
+.hero-scene .collage-item{
+  width:clamp(210px,26vw,330px)!important;
+  height:clamp(110px,13.5vh,158px)!important;
+}
+.hero-scene .collage-0{left:5%!important;top:5%!important}.hero-scene .collage-1{left:4%!important;top:32%!important}.hero-scene .collage-2{left:34%!important;top:6%!important}.hero-scene .collage-3{right:4%!important;top:28%!important}.hero-scene .collage-4{right:6%!important;top:57%!important}.hero-scene .collage-5{right:13%!important;bottom:4%!important}.hero-scene .collage-6{left:5%!important;bottom:7%!important}.hero-scene .collage-7{left:37%!important;bottom:0!important}.hero-scene .collage-8{left:4%!important;top:54%!important}.hero-scene .collage-9{right:4%!important;bottom:25%!important}.hero-scene .collage-10{left:28%!important;bottom:21%!important}.hero-scene .collage-11{right:6%!important;top:5%!important}.hero-scene .collage-12{left:34%!important;top:30%!important}.hero-scene .collage-13{right:32%!important;bottom:9%!important}
+.card-controls{left:50%;bottom:max(34px,env(safe-area-inset-bottom));gap:8px}
+.card-controls button{width:34px;height:34px;font-size:17px;box-shadow:0 10px 24px rgba(0,0,0,.24)}
+@media(max-width:800px){
+  .hero-iese-outline{width:clamp(50px,13vw,76px)!important}
+  .hero-scene .collage-item{width:clamp(170px,37vw,245px)!important;height:clamp(88px,12vh,118px)!important}
+  .hero-scene .collage-0{left:3%!important;top:4%!important}.hero-scene .collage-1{left:3%!important;top:34%!important}.hero-scene .collage-2{left:33%!important;top:5%!important}.hero-scene .collage-3{right:3%!important;top:30%!important}.hero-scene .collage-4{right:3%!important;top:58%!important}.hero-scene .collage-5{right:5%!important;bottom:4%!important}.hero-scene .collage-6{left:4%!important;bottom:7%!important}.hero-scene .collage-7{left:36%!important;bottom:0!important}.hero-scene .collage-8{left:4%!important;top:56%!important}.hero-scene .collage-9{right:3%!important;bottom:24%!important}.hero-scene .collage-10{left:27%!important;bottom:20%!important}.hero-scene .collage-11{right:6%!important;top:4%!important}.hero-scene .collage-12{left:33%!important;top:32%!important}.hero-scene .collage-13{right:30%!important;bottom:9%!important}
+  .card-controls{bottom:20px}.card-controls button{width:32px;height:32px;font-size:16px}
+}
