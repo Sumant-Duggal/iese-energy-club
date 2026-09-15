@@ -157,3 +157,95 @@
   .staged-card-hero .hero-card-stack,.staged-card-hero .hero-card{width:min(84vw,430px);height:54vh;max-height:410px}
   .staged-card-hero .hero-card{min-height:330px}
 }
+
+/* Revision: restore the earlier premium bank-card visual design */
+.staged-card-hero .hero-card-stack,.staged-card-hero .hero-card{
+  width:min(64vw,620px);
+  height:min(40vw,390px);
+  max-height:52vh;
+}
+.staged-card-hero .hero-card{min-height:245px}
+.staged-card-hero .card-depth{
+  border-radius:22px;
+  background:linear-gradient(90deg,#272c25,#11140f);
+  transform:translateZ(-5px);
+  box-shadow:0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.staged-card-hero .card-face{
+  border-radius:22px;
+  padding:0;
+  overflow:hidden;
+  background:#10120f;
+  color:white;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.15),0 24px 52px rgba(0,0,0,.26);
+}
+.staged-card-hero .card-front{transform:translateZ(5px)}
+.staged-card-hero .card-front::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.24),transparent 26%),linear-gradient(135deg,rgba(0,0,0,.03),rgba(0,0,0,.5));
+  pointer-events:none;
+}
+.staged-card-hero .card-back{transform:translateZ(-5px) rotateX(180deg);background:#0d0f0c;color:white}
+.staged-card-hero .card-video,.staged-card-hero .card-video .media{position:absolute;inset:0;background:linear-gradient(135deg,#41483e,#151812)}
+.staged-card-hero .card-video .media-label{color:#d9ddcf80;background:linear-gradient(135deg,#40463d,#171b15)}
+.staged-card-hero .card-video .media-label small{display:none}
+.staged-card-hero .card-video .media-cross{font-size:28px;opacity:.42}
+.staged-card-hero .card-video-blur{filter:blur(16px);transform:scale(1.15);opacity:.82}
+.staged-card-hero .card-chip{
+  position:absolute;
+  z-index:4;
+  left:7.1%;
+  top:50%;
+  bottom:auto;
+  width:8.6%;
+  min-width:32px;
+  height:auto;
+  aspect-ratio:1.22;
+  border-radius:8px;
+  transform:translateY(-50%);
+  background:linear-gradient(180deg,#fff,#999);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.24);
+}
+.staged-card-hero .card-chip::before{content:"";position:absolute;left:0;right:0;top:31%;bottom:31%;border-top:1px solid rgba(0,0,0,.28);border-bottom:1px solid rgba(0,0,0,.28)}
+.staged-card-hero .card-chip::after{content:"";position:absolute;top:0;bottom:0;left:34%;right:34%;border-left:1px solid rgba(0,0,0,.28);border-right:1px solid rgba(0,0,0,.28)}
+.staged-card-hero .card-brand{
+  position:absolute;
+  z-index:4;
+  right:7.1%;
+  top:11%;
+  display:flex;
+  align-items:center;
+  gap:.36em;
+  color:#fff;
+  font-size:clamp(18px,3.4vw,30px);
+  font-weight:650;
+  letter-spacing:-.065em;
+  opacity:.96;
+}
+.staged-card-hero .jwt-symbol{width:.72em;height:.72em;position:relative;display:inline-block;color:currentColor}
+.staged-card-hero .jwt-symbol::before,.staged-card-hero .jwt-symbol::after,.staged-card-hero .jwt-symbol i{content:"";position:absolute;left:50%;top:0;width:11%;height:100%;border-radius:999px;background:currentColor;transform-origin:50% 50%}
+.staged-card-hero .jwt-symbol::before{transform:translateX(-50%) rotate(0deg)}
+.staged-card-hero .jwt-symbol::after{transform:translateX(-50%) rotate(60deg)}
+.staged-card-hero .jwt-symbol i{transform:translateX(-50%) rotate(120deg)}
+.staged-card-hero .card-kicker{position:absolute;z-index:4;left:7.1%;top:10%;margin:0;color:rgba(255,255,255,.7);font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;font-size:clamp(8px,1.6vw,11px);letter-spacing:.16em;text-transform:uppercase}
+.staged-card-hero .hero-card strong{position:absolute;z-index:4;left:7.1%;right:22%;top:24%;max-width:none;color:white;font-size:clamp(24px,4.2vw,54px);line-height:.95;letter-spacing:-.065em;text-shadow:0 2px 18px rgba(0,0,0,.34)}
+.staged-card-hero .card-body{position:absolute;z-index:4;left:7.1%;bottom:10%;max-width:50%;margin:0;color:rgba(255,255,255,.78);font-size:clamp(11px,1.25vw,15px);line-height:1.18;letter-spacing:-.02em;text-shadow:0 2px 12px rgba(0,0,0,.34)}
+.staged-card-hero .card-meta{position:absolute;z-index:4;right:7.1%;bottom:10.6%;color:rgba(255,255,255,.78);font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;font-size:clamp(9px,1.7vw,12px);letter-spacing:.08em;text-transform:uppercase}
+.staged-card-hero .card-orbs{position:absolute;z-index:4;right:7.1%;bottom:20%;display:flex}
+.staged-card-hero .card-orbs i{width:clamp(24px,5vw,36px);height:clamp(24px,5vw,36px);border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.2);backdrop-filter:blur(1px)}
+.staged-card-hero .card-orbs i+i{margin-left:-14px;background:rgba(255,255,255,.36)}
+.staged-card-hero .card-stripe{position:absolute;z-index:3;left:0;right:0;top:10%;height:17%;background:rgba(0,0,0,.86);backdrop-filter:blur(12px)}
+.staged-card-hero .card-back .card-kicker{top:34%;color:rgba(255,255,255,.62)}
+.staged-card-hero .card-back strong{top:43%;font-size:clamp(20px,3.1vw,40px);color:white}
+.staged-card-hero .card-back .card-body{max-width:64%;bottom:19%;color:rgba(255,255,255,.68)}
+.staged-card-hero .card-number{position:absolute;z-index:4;left:7.1%;bottom:9%;font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;font-size:clamp(10px,1.9vw,14px);letter-spacing:.16em;color:rgba(255,255,255,.82)}
+@media(max-width:800px){
+  .staged-card-hero .hero-card-stack,.staged-card-hero .hero-card{width:min(86vw,470px);height:54vh;max-height:410px}
+  .staged-card-hero .hero-card{min-height:330px}
+  .staged-card-hero .hero-card strong{right:10%;font-size:clamp(28px,8vw,42px)}
+  .staged-card-hero .card-body{max-width:70%;font-size:13px}
+}
