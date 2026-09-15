@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210" role="img" aria-labelledby="title desc">
+  <title id="title">IESE Energy Club logo</title>
+  <desc id="desc">Shield-shaped four-quadrant energy logo extracted from the IESE Energy Club HTML file.</desc>
+  <defs>
+    <clipPath id="shieldClip">
+      <path d="M24,44 Q24,16 52,16 H148 Q176,16 176,44 V118 Q176,176 100,198 Q24,176 24,118 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#shieldClip)">
+    <rect x="0" y="0" width="100" height="107" fill="#FFC93C"/>
+    <rect x="100" y="0" width="100" height="107" fill="#2D7DD2"/>
+    <rect x="0" y="107" width="100" height="103" fill="#FFFFFF"/>
+    <rect x="100" y="107" width="100" height="103" fill="#FFC93C"/>
+    <g stroke="#0E0E0E" stroke-width="6" stroke-linecap="round">
+      <line x1="44" y1="30" x2="44" y2="96"/>
+      <line x1="60" y1="30" x2="60" y2="96"/>
+      <line x1="76" y1="30" x2="76" y2="96"/>
+    </g>
+    <g stroke="#0E0E0E" stroke-width="6" stroke-linecap="round">
+      <line x1="120" y1="120" x2="120" y2="180"/>
+      <line x1="136" y1="120" x2="136" y2="184"/>
+      <line x1="152" y1="120" x2="152" y2="174"/>
+    </g>
+    <g fill="#FFC93C" stroke="#0E0E0E" stroke-width="3">
+      <circle cx="148" cy="48" r="15"/>
+      <circle cx="148" cy="84" r="15"/>
+    </g>
+    <path d="M72,116 L46,152 L60,152 L48,190 L84,146 L68,146 L80,116 Z" fill="#FF6A2B" stroke="#0E0E0E" stroke-width="3" stroke-linejoin="round"/>
+    <g stroke="#0E0E0E" stroke-width="3.4">
+      <line x1="100" y1="16" x2="100" y2="192"/>
+      <line x1="24" y1="107" x2="176" y2="107"/>
+    </g>
+  </g>
+  <path d="M24,44 Q24,16 52,16 H148 Q176,16 176,44 V118 Q176,176 100,198 Q24,176 24,118 Z" fill="none" stroke="#0E0E0E" stroke-width="4" stroke-linejoin="round"/>
+</svg>

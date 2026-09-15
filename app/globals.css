@@ -80,3 +80,7 @@
   background:linear-gradient(135deg,#42483f,#151812);
 }
 @media(max-width:800px){.hero-scene .hero-film>.media{border-radius:14px}}
+
+/* Header logo replacement */
+.brand-mark .header-logo{width:42px;height:44px;display:block;object-fit:contain}
+@media(max-width:800px){.brand-mark .header-logo{width:38px;height:40px}}
