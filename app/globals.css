@@ -156,3 +156,40 @@
     height:clamp(110px,16vh,150px)!important;
   }
 }
+
+/* v2 experiment: clean settled hero-card layout with no final overlap. */
+.hero-scene .collage-item{
+  width:clamp(180px,21vw,260px)!important;
+  height:clamp(130px,17vh,200px)!important;
+}
+.hero-scene .collage-0{left:3%!important;top:4%!important;--shift:170px}
+.hero-scene .collage-1{left:3%!important;top:34%!important;--shift:-130px}
+.hero-scene .collage-2{left:39.5%!important;top:4%!important;--shift:210px}
+.hero-scene .collage-3{right:3%!important;top:4%!important;--shift:-210px}
+.hero-scene .collage-4{right:3%!important;top:34%!important;--shift:180px}
+.hero-scene .collage-5{left:3%!important;bottom:4%!important;--shift:-160px}
+.hero-scene .collage-6{left:39.5%!important;bottom:4%!important;--shift:145px}
+.hero-scene .collage-7{right:3%!important;bottom:4%!important;--shift:-190px}
+.hero-scene .collage-8,
+.hero-scene .collage-9,
+.hero-scene .collage-10,
+.hero-scene .collage-11,
+.hero-scene .collage-12,
+.hero-scene .collage-13{
+  opacity:clamp(0,calc((.78 - var(--p))*8),1)!important;
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero-scene .collage-item{
+    width:clamp(145px,31vw,200px)!important;
+    height:clamp(110px,16vh,150px)!important;
+  }
+  .hero-scene .collage-0{left:3%!important;top:3%!important}
+  .hero-scene .collage-1{left:3%!important;top:34%!important}
+  .hero-scene .collage-2{left:34.5%!important;top:3%!important}
+  .hero-scene .collage-3{right:3%!important;top:3%!important}
+  .hero-scene .collage-4{right:3%!important;top:34%!important}
+  .hero-scene .collage-5{left:3%!important;bottom:3%!important}
+  .hero-scene .collage-6{left:34.5%!important;bottom:3%!important}
+  .hero-scene .collage-7{right:3%!important;bottom:3%!important}
+}
