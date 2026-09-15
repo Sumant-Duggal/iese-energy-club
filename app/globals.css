@@ -230,3 +230,40 @@
   .hero-scene .collage-6{left:37.5%!important;bottom:12.0%!important}
   .hero-scene .collage-7{right:4.0%!important;bottom:13.5%!important}
 }
+
+/* User-numbered placement pass: move cards 1-8 to the numbered target centers. */
+.hero-scene .collage-item{
+  width:clamp(180px,13.5vw,230px)!important;
+  height:clamp(92px,7.8vw,128px)!important;
+}
+.hero-scene .collage-0{left:35.0%!important;top:14.9%!important;--shift:170px}
+.hero-scene .collage-1{left:46.4%!important;top:64.1%!important;--shift:-130px}
+.hero-scene .collage-2{left:22.1%!important;top:38.4%!important;--shift:210px}
+.hero-scene .collage-3{left:13.3%!important;top:18.6%!important;--shift:-210px}
+.hero-scene .collage-4{left:13.4%!important;top:63.0%!important;--shift:180px}
+.hero-scene .collage-5{left:58.6%!important;top:43.4%!important;--shift:-160px}
+.hero-scene .collage-6{left:67.2%!important;top:73.2%!important;--shift:145px}
+.hero-scene .collage-7{left:63.6%!important;top:4.8%!important;--shift:-190px}
+.hero-scene .collage-8,
+.hero-scene .collage-9,
+.hero-scene .collage-10,
+.hero-scene .collage-11,
+.hero-scene .collage-12,
+.hero-scene .collage-13{
+  opacity:clamp(0,calc((.78 - var(--p))*8),1)!important;
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero-scene .collage-item{
+    width:clamp(132px,31vw,185px)!important;
+    height:clamp(78px,16vw,112px)!important;
+  }
+  .hero-scene .collage-0{left:35.0%!important;top:14.9%!important}
+  .hero-scene .collage-1{left:46.4%!important;top:64.1%!important}
+  .hero-scene .collage-2{left:22.1%!important;top:38.4%!important}
+  .hero-scene .collage-3{left:13.3%!important;top:18.6%!important}
+  .hero-scene .collage-4{left:13.4%!important;top:63.0%!important}
+  .hero-scene .collage-5{left:58.6%!important;top:43.4%!important}
+  .hero-scene .collage-6{left:67.2%!important;top:73.2%!important}
+  .hero-scene .collage-7{left:63.6%!important;top:4.8%!important}
+}
