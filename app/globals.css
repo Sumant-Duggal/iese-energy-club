@@ -106,3 +106,8 @@
 .card-controls button{width:46px;height:46px;border-radius:999px;background:#fff;color:#0e0e0e;border:1px solid rgba(255,255,255,.5);box-shadow:0 16px 34px rgba(0,0,0,.28);font-size:22px;line-height:1;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
 .card-controls button:hover{transform:translateY(-2px);background:#FF151E;color:white}
 @media(max-width:800px){.card-controls{bottom:18px}.card-controls button{width:42px;height:42px}}
+
+/* Keep the hero headline white and remove the transition logo layer. */
+.hero-title{color:white!important;mix-blend-mode:normal!important}
+.scroll-cue{color:white!important;mix-blend-mode:normal!important}
+.mission.mission-logo{display:none!important}
