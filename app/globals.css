@@ -57,3 +57,26 @@
 .hero-scene .collage-item .media-cross{font-size:22px;opacity:.42}
 .hero-scene .collage-item .media-label span:not(.media-cross){font-size:11px;letter-spacing:-.02em}
 @media(max-width:800px){.hero-scene .collage-item{border-radius:12px;box-shadow:0 14px 28px rgba(0,0,0,.2),inset 0 1px 1px rgba(255,255,255,.14)}}
+
+/* Frame 02: make the shrinking hero film share the rounded card shape. */
+.hero-scene .hero-film>.media{
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 24px 54px rgba(0,0,0,.24), inset 0 1px 1px rgba(255,255,255,.18);
+  background:#11130f;
+}
+.hero-scene .hero-film>.media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  border-radius:inherit;
+  background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(0,0,0,.34));
+  pointer-events:none;
+}
+.hero-scene .hero-film .media-label{
+  z-index:2;
+  border-radius:inherit;
+  background:linear-gradient(135deg,#42483f,#151812);
+}
+@media(max-width:800px){.hero-scene .hero-film>.media{border-radius:14px}}
