@@ -28,3 +28,32 @@
 .card-cylinder-embed .card-camera{pointer-events:none}
 @media(max-width:800px){.home-card-transition{height:230svh}.home-card-lime p{font-size:clamp(25px,6.1vw,40px);max-width:88vw}.home-card-layer{transform:translateY(calc((1 - clamp(0,calc((var(--p) - .18)*4),1))*5vh))}}
 @media(prefers-reduced-motion:reduce){.home-card-transition{height:auto;min-height:100svh}.home-card-stage{position:relative;height:100svh}.home-card-lime{opacity:0}.home-card-layer{opacity:1;transform:none}}
+
+/* Frame 02 onward: keep collage tile scale/placement, but make each tile read as a rounded card. */
+.hero-scene .collage-item{
+  border-radius:16px;
+  background:#11130f;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 22px 48px rgba(0,0,0,.22), inset 0 1px 1px rgba(255,255,255,.18);
+  transform:translateY(calc((.5 - var(--p))*var(--shift,100px))) rotateZ(-3deg);
+  isolation:isolate;
+}
+.hero-scene .collage-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  border-radius:inherit;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(0,0,0,.38)),radial-gradient(circle at 30% 22%,rgba(255,255,255,.2),transparent 32%);
+  pointer-events:none;
+}
+.hero-scene .collage-item .media-label{
+  z-index:2;
+  border-radius:inherit;
+  background:linear-gradient(135deg,#42483f,#151812);
+  color:rgba(255,255,255,.72);
+}
+.hero-scene .collage-item .media-label::before,.hero-scene .collage-item .media-label::after{display:none}
+.hero-scene .collage-item .media-cross{font-size:22px;opacity:.42}
+.hero-scene .collage-item .media-label span:not(.media-cross){font-size:11px;letter-spacing:-.02em}
+@media(max-width:800px){.hero-scene .collage-item{border-radius:12px;box-shadow:0 14px 28px rgba(0,0,0,.2),inset 0 1px 1px rgba(255,255,255,.14)}}
