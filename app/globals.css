@@ -111,3 +111,16 @@
 .hero-title{color:white!important;mix-blend-mode:normal!important}
 .scroll-cue{color:white!important;mix-blend-mode:normal!important}
 .mission.mission-logo{display:none!important}
+
+/* Replace animated breakthrough emblem with IESE white-outline mark. */
+.hero-iese-outline{width:clamp(92px,14vw,190px)!important;height:auto!important;object-fit:contain;mix-blend-mode:normal!important;filter:none!important}
+
+/* Restore original black card-workspace background after the red intro card. */
+.home-card-stage{background:#000!important}
+.card-cylinder-page.card-cylinder-embed{background:#000!important}
+.home-card-layer{background:#000}
+
+/* Pull the frame-02 collage cards inward, make them larger, and keep one shared size. */
+.hero-scene .collage-item{width:clamp(175px,23vw,285px)!important;height:clamp(108px,14.5vh,168px)!important}
+.hero-scene .collage-0{left:3%!important;top:5%!important}.hero-scene .collage-1{left:4%!important;top:31%!important}.hero-scene .collage-2{left:39%!important;top:6%!important}.hero-scene .collage-3{right:4%!important;top:22%!important}.hero-scene .collage-4{right:8%!important;top:50%!important}.hero-scene .collage-5{right:14%!important;bottom:5%!important}.hero-scene .collage-6{left:8%!important;bottom:6%!important}.hero-scene .collage-7{left:39%!important;bottom:1%!important}.hero-scene .collage-8{left:5%!important;top:56%!important}.hero-scene .collage-9{right:5%!important;bottom:23%!important}.hero-scene .collage-10{left:25%!important;bottom:18%!important}.hero-scene .collage-11{right:7%!important;top:3%!important}.hero-scene .collage-12{left:37%!important;top:26%!important}.hero-scene .collage-13{right:31%!important;bottom:9%!important}
+@media(max-width:800px){.hero-scene .collage-item{width:clamp(150px,29vw,230px)!important;height:clamp(92px,13vh,132px)!important}.hero-scene .collage-0{left:4%!important;top:4%!important}.hero-scene .collage-1{left:3%!important;top:29%!important}.hero-scene .collage-2{left:39%!important;top:4%!important}.hero-scene .collage-3{right:3%!important;top:22%!important}.hero-scene .collage-4{right:5%!important;top:48%!important}.hero-scene .collage-5{right:7%!important;bottom:5%!important}.hero-scene .collage-6{left:7%!important;bottom:7%!important}.hero-scene .collage-7{left:37%!important;bottom:0!important}.hero-scene .collage-8{left:4%!important;top:55%!important}.hero-scene .collage-9{right:4%!important;bottom:24%!important}.hero-scene .collage-10{left:25%!important;bottom:20%!important}.hero-scene .collage-11{right:7%!important;top:2%!important}.hero-scene .collage-12{left:37%!important;top:27%!important}.hero-scene .collage-13{right:29%!important;bottom:9%!important}}
