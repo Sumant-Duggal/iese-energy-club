@@ -144,3 +144,15 @@
   .hero-scene .collage-0{left:3%!important;top:4%!important}.hero-scene .collage-1{left:3%!important;top:34%!important}.hero-scene .collage-2{left:33%!important;top:5%!important}.hero-scene .collage-3{right:3%!important;top:30%!important}.hero-scene .collage-4{right:3%!important;top:58%!important}.hero-scene .collage-5{right:5%!important;bottom:4%!important}.hero-scene .collage-6{left:4%!important;bottom:7%!important}.hero-scene .collage-7{left:36%!important;bottom:0!important}.hero-scene .collage-8{left:4%!important;top:56%!important}.hero-scene .collage-9{right:3%!important;bottom:24%!important}.hero-scene .collage-10{left:27%!important;bottom:20%!important}.hero-scene .collage-11{right:6%!important;top:4%!important}.hero-scene .collage-12{left:33%!important;top:32%!important}.hero-scene .collage-13{right:30%!important;bottom:9%!important}
   .card-controls{bottom:20px}.card-controls button{width:32px;height:32px;font-size:16px}
 }
+
+/* Adjust hero collage cards: reduced breadth and longer vertical shape. */
+.hero-scene .collage-item{
+  width:clamp(180px,21vw,260px)!important;
+  height:clamp(130px,17vh,200px)!important;
+}
+@media(max-width:800px){
+  .hero-scene .collage-item{
+    width:clamp(145px,31vw,200px)!important;
+    height:clamp(110px,16vh,150px)!important;
+  }
+}
