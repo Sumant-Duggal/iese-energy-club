@@ -1072,3 +1072,154 @@
   .editorial-cover h1{font-size:clamp(62px,18vw,118px)!important;bottom:82px!important;line-height:.86!important}
   .editorial-cover h1 span{white-space:normal}
 }
+
+
+/* Editorial cover layout with card image and right-side join content. */
+.editorial-cover{
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(330px,.72fr);
+  align-items:center;
+  gap:clamp(24px,4vw,64px);
+  padding-top:clamp(96px,11vh,130px)!important;
+  padding-bottom:clamp(96px,11vh,128px)!important;
+}
+.editorial-cover-card{
+  position:relative;
+  z-index:1;
+  margin:0;
+  align-self:center;
+  width:100%;
+  height:clamp(390px,58vh,560px);
+  overflow:hidden;
+  border-radius:clamp(18px,2vw,30px);
+  background:#151812;
+  border:1px solid rgba(28,25,19,.18);
+  box-shadow:18px 22px 0 rgba(28,25,19,.96),0 34px 90px rgba(28,25,19,.22),inset 0 1px 1px rgba(255,255,255,.22);
+  transform:rotate(-1.4deg);
+}
+.editorial-cover-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(0,0,0,.34));
+  pointer-events:none;
+}
+.editorial-cover-card .editorial-cover-image{
+  position:static!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  filter:saturate(.95) contrast(.98)!important;
+  box-shadow:none!important;
+}
+.editorial-cover-copy{
+  position:relative;
+  z-index:2;
+  align-self:center;
+  display:grid;
+  gap:clamp(20px,2.4vw,32px);
+  color:var(--ink);
+}
+.editorial-cover-copy>span{
+  color:var(--brick);
+  font-size:clamp(12px,1vw,15px);
+  font-weight:800;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.editorial-cover-copy h2{
+  margin:0;
+  font-family:"Public Sans",Arial,Helvetica,sans-serif;
+  font-size:clamp(44px,5.2vw,78px);
+  line-height:.88;
+  letter-spacing:-.065em;
+  font-weight:800;
+}
+.editorial-cover-copy ul{
+  display:grid;
+  gap:14px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.editorial-cover-copy li{
+  position:relative;
+  padding-left:36px;
+  font-size:clamp(16px,1.55vw,22px);
+  line-height:1.14;
+  letter-spacing:-.025em;
+}
+.editorial-cover-copy li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:-3px;
+  width:25px;
+  height:25px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  background:var(--brick);
+  color:var(--cream);
+  font-size:15px;
+  font-weight:800;
+}
+.editorial-cover-copy>div{
+  border:2px solid var(--ink);
+  border-radius:clamp(18px,2vw,30px);
+  background:var(--brick);
+  color:var(--cream);
+  padding:clamp(22px,3vw,38px);
+  box-shadow:10px 12px 0 var(--ink);
+}
+.editorial-cover-copy h3{
+  margin:0 0 16px;
+  max-width:420px;
+  font-size:clamp(25px,3vw,42px);
+  line-height:.96;
+  letter-spacing:-.055em;
+  font-weight:800;
+}
+.editorial-cover-copy p{
+  max-width:500px;
+  margin:0;
+  color:rgba(241,236,225,.9);
+  font-size:clamp(15px,1.5vw,22px);
+  line-height:1.28;
+  letter-spacing:-.025em;
+}
+.editorial-cover-copy a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:22px;
+  min-height:44px;
+  padding:0 24px;
+  border-radius:999px;
+  background:var(--cream);
+  color:var(--ink);
+  border:2px solid var(--ink);
+  box-shadow:5px 6px 0 var(--ink);
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.editorial-cover h1{
+  z-index:5!important;
+  color:var(--brick)!important;
+  mix-blend-mode:normal!important;
+  pointer-events:none;
+  text-shadow:0 1px 0 rgba(241,236,225,.18);
+}
+@media(min-width:1000px){
+  .editorial-cover h1{left:clamp(30px,4vw,60px)!important;right:auto!important;bottom:clamp(42px,5vh,68px)!important;font-size:clamp(72px,11vw,178px)!important;max-width:72vw!important}
+}
+@media(max-width:999px){
+  .editorial-cover{display:block;padding-top:104px!important}
+  .editorial-cover-card{height:38vh;margin:0 0 26px;box-shadow:10px 12px 0 rgba(28,25,19,.96),0 24px 62px rgba(28,25,19,.18)}
+  .editorial-cover-copy{margin-bottom:150px}.editorial-cover-copy h2{font-size:clamp(38px,10vw,64px)}
+  .editorial-cover h1{bottom:72px!important;font-size:clamp(54px,15vw,108px)!important;white-space:normal!important}
+}
+@media(max-width:640px){
+  .editorial-cover-copy li{font-size:15px}.editorial-cover-copy>div{padding:22px;box-shadow:7px 8px 0 var(--ink)}.editorial-cover-copy p{font-size:15px}.editorial-cover-card{height:32vh}
+}
