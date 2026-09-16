@@ -861,3 +861,49 @@
   .home-pill-single{width:auto;border-radius:999px;align-items:center}
   .home-pill-single .home-pill{min-width:158px;min-height:46px;font-size:13px;padding:0 30px}
 }
+
+
+/* Refine Join us pill: smaller with visible idle motion plus hover fill. */
+.home-pill-single{
+  padding:5px!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.14)!important;
+}
+.home-pill-single .home-pill{
+  min-width:118px!important;
+  min-height:34px!important;
+  padding:0 18px!important;
+  font-size:11px!important;
+  letter-spacing:.08em!important;
+}
+.home-pill-single .home-pill-fill{
+  animation:joinPillIdle 2.8s cubic-bezier(.16,1,.3,1) infinite;
+}
+.home-pill-single .home-pill:hover .home-pill-fill,
+.home-pill-single .home-pill:focus-visible .home-pill-fill{
+  animation:none;
+}
+.home-pill-single .home-pill::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:999px;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.55) 45%,transparent 70%);
+  transform:translateX(-130%);
+  animation:joinPillSheen 2.8s ease-in-out infinite;
+  mix-blend-mode:screen;
+}
+.home-pill-single .home-pill:hover::after,
+.home-pill-single .home-pill:focus-visible::after{animation:none;opacity:0}
+@keyframes joinPillIdle{
+  0%,72%,100%{transform:translateX(-50%) scale(0)}
+  18%,34%{transform:translateX(-50%) scale(.18)}
+}
+@keyframes joinPillSheen{
+  0%,45%{transform:translateX(-130%)}
+  68%,100%{transform:translateX(130%)}
+}
+@media(max-width:800px){
+  .home-pill-single .home-pill{min-width:112px!important;min-height:34px!important;font-size:10.5px!important;padding:0 16px!important}
+}
