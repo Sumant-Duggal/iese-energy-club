@@ -1323,3 +1323,7 @@
   .editorial-cover .editorial-byline{left:36px!important;bottom:42px!important;max-width:70vw!important}
   .editorial-cover-copy>div{padding:20px!important}
 }
+
+/* Clean editorial cover footer labels. */
+.editorial-cover .editorial-byline,
+.editorial-cover .editorial-slide-label{display:none!important}
