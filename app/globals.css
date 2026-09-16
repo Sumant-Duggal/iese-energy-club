@@ -316,3 +316,13 @@
   .hero-scene .collage-6{left:4%!important;top:43%!important;right:auto!important;bottom:auto!important}
   .hero-scene .collage-7{left:15%!important;top:19%!important;right:auto!important;bottom:auto!important}
 }
+
+/* Ring cleanup: pull top card into frame and separate marked side overlaps. */
+.hero-scene .collage-0{left:39%!important;top:11%!important;right:auto!important;bottom:auto!important}
+.hero-scene .collage-2{left:72%!important;top:34%!important;right:auto!important;bottom:auto!important}
+.hero-scene .collage-7{left:4%!important;top:31%!important;right:auto!important;bottom:auto!important}
+@media(max-width:800px){
+  .hero-scene .collage-0{left:39%!important;top:11%!important;right:auto!important;bottom:auto!important}
+  .hero-scene .collage-2{left:72%!important;top:34%!important;right:auto!important;bottom:auto!important}
+  .hero-scene .collage-7{left:4%!important;top:31%!important;right:auto!important;bottom:auto!important}
+}
