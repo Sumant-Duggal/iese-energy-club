@@ -429,3 +429,27 @@
   opacity:clamp(0,calc((.70 - var(--p))*8),1)!important;
   pointer-events:none!important;
 }
+
+/* Settled hero caption requested in browser annotation. */
+.hero-since{
+  position:absolute;
+  left:50%;
+  top:36%;
+  z-index:3;
+  transform:translate(-50%,-50%) translateY(clamp(0px,calc((.86 - var(--p))*70px),45px));
+  color:white;
+  font-size:clamp(18px,2.6vw,38px);
+  line-height:1.05;
+  letter-spacing:-.045em;
+  text-align:center;
+  width:min(72vw,760px);
+  opacity:clamp(0,calc((var(--p) - .68)*6),1);
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero-since{
+    top:34%;
+    width:78vw;
+    font-size:clamp(20px,5vw,30px);
+  }
+}
