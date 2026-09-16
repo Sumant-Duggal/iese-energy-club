@@ -907,3 +907,9 @@
 @media(max-width:800px){
   .home-pill-single .home-pill{min-width:112px!important;min-height:34px!important;font-size:10.5px!important;padding:0 16px!important}
 }
+
+/* Keep Join us animation hover-only. */
+.home-pill-single .home-pill-fill{animation:none!important}
+.home-pill-single .home-pill::after{animation:none!important;opacity:0!important}
+.home-pill-single .home-pill:hover .home-pill-fill,
+.home-pill-single .home-pill:focus-visible .home-pill-fill{transform:translateX(-50%) scale(1.12)!important}
