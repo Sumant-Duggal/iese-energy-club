@@ -763,3 +763,84 @@
 @media(max-width:760px){.masonry-page{padding-inline:16px}.masonry-grid{column-count:2;column-gap:14px}.masonry-tile{height:calc(var(--tile-h)*.72);border-radius:18px;margin-bottom:14px}.masonry-tile span{font-size:16px;left:14px;bottom:12px}.masonry-refresh,.masonry-home{width:100%;margin-right:0}}
 @media(max-width:480px){.masonry-grid{column-count:1}.masonry-tile{height:min(var(--tile-h),430px)}}
 @media(prefers-reduced-motion:reduce){.masonry-tile{animation:none}.masonry-tile img{transition:none}}
+
+
+/* Pill buttons centered below the IESE Energy Club line in the card intro frame. */
+.home-pill-nav{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:8px;
+  border-radius:999px;
+  background:#171718;
+  color:#171718;
+  pointer-events:auto;
+  box-shadow:0 18px 48px rgba(0,0,0,.18);
+}
+.home-pill-logo{
+  width:48px;
+  height:48px;
+  flex:0 0 48px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:999px;
+  background:#171718;
+  transition:transform .55s cubic-bezier(.16,1,.3,1);
+}
+.home-pill-logo img{width:32px;height:32px;object-fit:contain}
+.home-pill-logo:hover{transform:rotate(360deg) scale(1.04)}
+.home-pill-list{display:flex;align-items:center;gap:6px}
+.home-pill{
+  position:relative;
+  min-height:42px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:999px;
+  padding:0 20px;
+  background:#fff;
+  color:#171718;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  line-height:1;
+  isolation:isolate;
+}
+.home-pill-fill{
+  position:absolute;
+  left:50%;
+  bottom:-90%;
+  width:145%;
+  aspect-ratio:1;
+  border-radius:999px;
+  background:#171718;
+  transform:translateX(-50%) scale(0);
+  transform-origin:50% 88%;
+  transition:transform .58s cubic-bezier(.16,1,.3,1);
+  z-index:1;
+}
+.home-pill-stack{
+  position:relative;
+  z-index:2;
+  display:grid;
+  overflow:hidden;
+}
+.home-pill-stack span{
+  grid-area:1/1;
+  transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .45s cubic-bezier(.16,1,.3,1),color .45s ease;
+}
+.home-pill-stack span+span{color:#fff;transform:translateY(150%);opacity:0}
+.home-pill:hover .home-pill-fill,.home-pill:focus-visible .home-pill-fill{transform:translateX(-50%) scale(1.12)}
+.home-pill:hover .home-pill-stack span:first-child,.home-pill:focus-visible .home-pill-stack span:first-child{transform:translateY(-150%);opacity:0}
+.home-pill:hover .home-pill-stack span+span,.home-pill:focus-visible .home-pill-stack span+span{transform:translateY(0);opacity:1}
+@media(max-width:800px){
+  .home-card-lime{gap:24px}
+  .home-pill-nav{width:min(92vw,420px);border-radius:30px;align-items:flex-start}
+  .home-pill-list{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .home-pill{min-height:38px;padding:0 12px;font-size:11px}
+  .home-pill-logo{width:44px;height:44px;flex-basis:44px}.home-pill-logo img{width:29px;height:29px}
+}
