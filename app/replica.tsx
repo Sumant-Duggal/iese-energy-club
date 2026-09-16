@@ -36,7 +36,7 @@ function FlowingMenuExperiment(){const items=[
  {text:'What we do',image:assets['collage-2']||'/energy-picture-2.jpg'},
  {text:'Events',image:assets['collage-3']||'/energy-picture-4.jpg'},
  {text:'Network',image:assets['collage-5']||'/energy-picture-1.jpg'}
-];return <section className="experiment-section" aria-label="Experiment section"><div className="experiment-shell"><div className="experiment-kicker">Experiment section</div><FlowingMenu items={items}/></div></section>}
+];return <section id="experiment-section" className="experiment-section" aria-label="Experiment section"><div className="experiment-shell"><div className="experiment-kicker">Experiment section</div><FlowingMenu items={items}/></div></section>}
 type FlowingMenuItem={text:string,image:string};
 function FlowingMenu({items}:{items:FlowingMenuItem[]}){return <nav className="flowing-menu" aria-label="Energy club experiment menu">{items.map((item,i)=><a className="flowing-menu-item" href="#" key={item.text} style={{'--image':`url(${item.image})`} as CSSProperties} onClick={e=>e.preventDefault()}><span className="flowing-menu-label">{item.text}</span><span className="flowing-menu-marquee" aria-hidden="true"><span>{Array.from({length:6},(_,j)=><b key={j}>{item.text}<i style={{backgroundImage:`url(${item.image})`}}/></b>)}</span></span></a>)}</nav>}
 

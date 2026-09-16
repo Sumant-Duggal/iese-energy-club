@@ -646,3 +646,10 @@
   .flowing-menu-marquee>span{animation:none}
   .flowing-menu-marquee{transition:none}
 }
+
+
+/* Make the latest experiment pass visible sooner and remove the settled-frame logo cleanly. */
+.home-card-transition{height:170svh!important}
+.hero-scene .hero-iese-outline{opacity:0!important;visibility:hidden!important}
+#experiment-section{scroll-margin-top:0}
+@media(max-width:800px){.home-card-transition{height:155svh!important}}
