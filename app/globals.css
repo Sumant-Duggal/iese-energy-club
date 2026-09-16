@@ -1041,3 +1041,34 @@
 @media(max-width:800px){
   .editorial-slide{padding:24px}.editorial-furniture{left:24px;right:24px;top:25px;font-size:10px}.editorial-slide-label{right:24px;bottom:22px}.editorial-cover h1{font-size:clamp(86px,28vw,165px);bottom:80px}.editorial-byline{left:24px;right:24px;font-size:10px}.editorial-stat p{max-width:88%;font-size:clamp(25px,8vw,42px)}.editorial-break h2{font-size:clamp(54px,16vw,112px)}
 }
+
+
+/* Editorial cover revision: photo-backed WHY JOIN US headline. */
+.editorial-cover-image{
+  position:absolute;
+  left:clamp(30px,4.2vw,66px);
+  right:clamp(30px,4.2vw,66px);
+  bottom:clamp(122px,13vw,178px);
+  width:auto;
+  height:clamp(220px,36vh,340px);
+  z-index:1;
+  object-fit:cover;
+  border-radius:0;
+  filter:saturate(.9) contrast(.96);
+  box-shadow:0 28px 80px rgba(28,25,19,.16);
+}
+.editorial-cover-image::after{display:none}
+.editorial-cover h1{
+  z-index:2!important;
+  bottom:clamp(62px,6vw,96px)!important;
+  font-size:clamp(76px,15.5vw,248px)!important;
+  line-height:.82!important;
+  max-width:92vw;
+  mix-blend-mode:multiply;
+}
+.editorial-cover h1 span{white-space:nowrap}
+@media(max-width:800px){
+  .editorial-cover-image{left:24px;right:24px;bottom:150px;height:240px}
+  .editorial-cover h1{font-size:clamp(62px,18vw,118px)!important;bottom:82px!important;line-height:.86!important}
+  .editorial-cover h1 span{white-space:normal}
+}
