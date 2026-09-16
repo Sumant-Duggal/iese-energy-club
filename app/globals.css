@@ -412,3 +412,20 @@
   .hero-scene .collage-3{left:12%!important;top:72%!important;right:auto!important;bottom:auto!important}
   .hero-scene .collage-4{right:12%!important;left:auto!important;top:72%!important;bottom:auto!important}
 }
+
+/* Final hero focus: only the two main cards remain in the settled frame. */
+.hero-scene .collage-2,
+.hero-scene .collage-3,
+.hero-scene .collage-4,
+.hero-scene .collage-5,
+.hero-scene .collage-6,
+.hero-scene .collage-7,
+.hero-scene .collage-8,
+.hero-scene .collage-9,
+.hero-scene .collage-10,
+.hero-scene .collage-11,
+.hero-scene .collage-12,
+.hero-scene .collage-13{
+  opacity:clamp(0,calc((.70 - var(--p))*8),1)!important;
+  pointer-events:none!important;
+}
