@@ -500,3 +500,26 @@
   text-shadow:0 10px 28px rgba(0,0,0,.52);
   pointer-events:none;
 }
+
+/* Fix video-only card visibility and scale the title to the card. */
+.lab-video-only{
+  background:#05070a!important;
+}
+.lab-video-only::after{
+  display:none!important;
+}
+.lab-video-only video{
+  z-index:1;
+  opacity:1!important;
+  filter:none!important;
+}
+.lab-video-title{
+  font-size:clamp(16px,1.75vw,28px)!important;
+  letter-spacing:.01em!important;
+  text-shadow:0 5px 14px rgba(0,0,0,.58)!important;
+}
+@media(max-width:800px){
+  .lab-video-title{
+    font-size:clamp(14px,4.6vw,22px)!important;
+  }
+}
