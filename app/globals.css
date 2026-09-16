@@ -844,3 +844,20 @@
   .home-pill{min-height:38px;padding:0 12px;font-size:11px}
   .home-pill-logo{width:44px;height:44px;flex-basis:44px}.home-pill-logo img{width:29px;height:29px}
 }
+
+
+/* Single Join us pill variant. */
+.home-pill-single{
+  padding:7px;
+  background:#171718;
+}
+.home-pill-single .home-pill{
+  min-width:178px;
+  min-height:50px;
+  padding:0 34px;
+  font-size:14px;
+}
+@media(max-width:800px){
+  .home-pill-single{width:auto;border-radius:999px;align-items:center}
+  .home-pill-single .home-pill{min-width:158px;min-height:46px;font-size:13px;padding:0 30px}
+}
