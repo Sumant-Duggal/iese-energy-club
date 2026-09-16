@@ -653,3 +653,5 @@
 .hero-scene .hero-iese-outline{opacity:0!important;visibility:hidden!important}
 #experiment-section{scroll-margin-top:0}
 @media(max-width:800px){.home-card-transition{height:155svh!important}}
+
+/* Deployment correction: ensure experiment-section archive refresh. */
