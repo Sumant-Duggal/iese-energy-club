@@ -334,3 +334,34 @@
   .hero-scene .collage-2{left:72%!important;top:28%!important;right:auto!important;bottom:auto!important}
   .hero-scene .collage-6{left:-3%!important;top:35%!important;right:auto!important;bottom:auto!important}
 }
+
+/* Two-card settled composition: large cards flanking the IESE logo. */
+.hero-scene .collage-item{
+  width:clamp(260px,27vw,380px)!important;
+  height:clamp(150px,15vw,220px)!important;
+}
+.hero-scene .collage-0{left:8%!important;top:40%!important;right:auto!important;bottom:auto!important;--shift:170px}
+.hero-scene .collage-1{right:8%!important;left:auto!important;top:40%!important;bottom:auto!important;--shift:-130px}
+.hero-scene .collage-2,
+.hero-scene .collage-3,
+.hero-scene .collage-4,
+.hero-scene .collage-5,
+.hero-scene .collage-6,
+.hero-scene .collage-7,
+.hero-scene .collage-8,
+.hero-scene .collage-9,
+.hero-scene .collage-10,
+.hero-scene .collage-11,
+.hero-scene .collage-12,
+.hero-scene .collage-13{
+  opacity:clamp(0,calc((.70 - var(--p))*8),1)!important;
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero-scene .collage-item{
+    width:clamp(175px,39vw,235px)!important;
+    height:clamp(106px,23vw,140px)!important;
+  }
+  .hero-scene .collage-0{left:4%!important;top:40%!important;right:auto!important;bottom:auto!important}
+  .hero-scene .collage-1{right:4%!important;left:auto!important;top:40%!important;bottom:auto!important}
+}
