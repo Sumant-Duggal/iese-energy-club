@@ -326,3 +326,11 @@
   .hero-scene .collage-2{left:72%!important;top:34%!important;right:auto!important;bottom:auto!important}
   .hero-scene .collage-7{left:4%!important;top:31%!important;right:auto!important;bottom:auto!important}
 }
+
+/* Final ring separation: spread the marked left and right card pairs apart. */
+.hero-scene .collage-2{left:78%!important;top:25%!important;right:auto!important;bottom:auto!important}
+.hero-scene .collage-6{left:0%!important;top:34%!important;right:auto!important;bottom:auto!important}
+@media(max-width:800px){
+  .hero-scene .collage-2{left:72%!important;top:28%!important;right:auto!important;bottom:auto!important}
+  .hero-scene .collage-6{left:-3%!important;top:35%!important;right:auto!important;bottom:auto!important}
+}
