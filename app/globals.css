@@ -1363,7 +1363,7 @@
   .editorial-benefits-block{
     position:absolute!important;
     left:56.8%!important;
-    top:18.72%!important;
+    top:17.22%!important;
     width:34%!important;
     height:25%!important;
     z-index:5!important;
@@ -1472,8 +1472,8 @@
 }
 @media(min-width:901px){
   .editorial-info-card{
-    left:56.8%!important;
-    top:43.5%!important;
+    left:56.85%!important;
+    top:44.90%!important;
     width:34%!important;
     height:auto!important;
     display:block!important;
@@ -1488,3 +1488,12 @@
     line-height:1.22!important;
   }
 }
+
+/* Editorial layout lab editing controls. */
+.layout-lab-delete{position:absolute;right:6px;top:6px;z-index:8;width:26px;height:26px;border-radius:999px;background:#1c1913!important;color:#f1ece1!important;border:2px solid #f1ece1!important;box-shadow:0 0 0 1px #1c1913!important;font-weight:900;line-height:1;display:grid;place-items:center;padding:0!important}
+.layout-lab-delete:hover{background:#b3401f!important}
+.layout-lab-box [contenteditable="true"]{cursor:text;user-select:text;outline:0;border-radius:4px}
+.layout-lab-box [contenteditable="true"]:focus{box-shadow:0 0 0 2px rgba(47,131,213,.45);background:rgba(255,255,255,.24)}
+.layout-lab-benefits p{display:flex;gap:8px;align-items:flex-start}
+.layout-lab-benefits p>span:first-child{color:#b3401f;font-weight:900;flex:0 0 auto}
+.layout-lab-benefits p>span:last-child{min-width:0}
