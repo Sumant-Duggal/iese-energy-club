@@ -1428,3 +1428,22 @@
   .editorial-info-card p{font-size:clamp(13px,1.25vw,20px)!important;line-height:1.2!important}
   .editorial-info-card a{align-self:flex-start!important;margin-top:clamp(12px,2vh,20px)!important}
 }
+
+/* Keep the benefits copy as plain text at every viewport size. */
+.editorial-cover-copy>.editorial-benefits-block{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  color:var(--ink)!important;
+}
+.editorial-cover-copy>.editorial-benefits-block h2,
+.editorial-cover-copy>.editorial-benefits-block li{
+  color:var(--ink)!important;
+}
+.editorial-cover-copy>.editorial-benefits-block::before,
+.editorial-cover-copy>.editorial-benefits-block::after{
+  content:none!important;
+  display:none!important;
+}
