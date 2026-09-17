@@ -1599,7 +1599,7 @@
   top:50%!important;
   transform:translate(-50%,-50%)!important;
   z-index:5!important;
-  color:#b3401f!important;
+  color:#FF151E!important;
   font-family:Georgia,"Times New Roman",serif!important;
   font-size:clamp(44px,6.2vw,92px)!important;
   line-height:.86!important;
@@ -1649,3 +1649,5 @@
   .editorial-global-card .wired-woven-logo{width:94%!important;top:66%!important;}
   .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
 }
+
+
