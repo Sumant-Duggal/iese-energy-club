@@ -1582,3 +1582,21 @@
     box-shadow:10px 12px 0 rgba(28,25,19,.95),0 20px 50px rgba(28,25,19,.2)!important;
   }
 }
+
+/* Wired & Woven logo overlay on the Global Energy image card. */
+.editorial-global-card{position:relative!important;}
+.editorial-global-card .wired-woven-logo{
+  position:absolute!important;
+  left:50%!important;
+  bottom:clamp(20px,4vh,42px)!important;
+  transform:translateX(-50%)!important;
+  width:min(58%,620px)!important;
+  height:auto!important;
+  object-fit:contain!important;
+  z-index:6!important;
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.35))!important;
+  pointer-events:none!important;
+}
+@media(max-width:900px){
+  .editorial-global-card .wired-woven-logo{width:76%!important;bottom:24px!important;}
+}
