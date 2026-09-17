@@ -1472,8 +1472,8 @@
 }
 .editorial-info-card .editorial-qr{
   display:block;
-  width:128px;
-  height:128px;
+  width:176px;
+  height:176px;
   margin-top:18px;
   border-radius:10px;
   background:#fff;
@@ -1507,3 +1507,17 @@
 .layout-lab-benefits p{display:flex;gap:8px;align-items:flex-start}
 .layout-lab-benefits p>span:first-child{color:#b3401f;font-weight:900;flex:0 0 auto}
 .layout-lab-benefits p>span:last-child{min-width:0}
+
+/* Extra editorial spacing requested after QR addition. */
+.editorial-cover-copy>.editorial-benefits-block ul{
+  gap:18px!important;
+}
+@media(max-width:900px){
+  .editorial-cover-copy>.editorial-benefits-block ul{
+    gap:14px!important;
+  }
+  .editorial-info-card .editorial-qr{
+    width:176px!important;
+    height:176px!important;
+  }
+}
