@@ -1562,7 +1562,7 @@
   box-shadow:18px 20px 0 rgba(28,25,19,.95),0 30px 90px rgba(28,25,19,.22)!important;
   transform:rotate(-1deg)!important;
 }
-.editorial-global-energy .editorial-global-card img{
+.editorial-global-energy .editorial-global-card > img.editorial-global-photo{
   width:100%!important;
   height:100%!important;
   object-fit:cover!important;
@@ -1610,7 +1610,7 @@
   max-width:min(36%,380px)!important;
   text-shadow:0 5px 18px rgba(0,0,0,.28)!important;
 }
-.editorial-global-card .wired-woven-logo{
+.editorial-global-energy .editorial-global-card .wired-woven-logo{
   position:absolute!important;
   left:50%!important;
   top:61%!important;
@@ -1647,9 +1647,10 @@
 }
 @media(max-width:900px){
   .editorial-global-title{font-size:clamp(30px,8.2vw,62px)!important;top:49%!important;}
-  .editorial-global-card .wired-woven-logo{width:46%!important;max-height:25%!important;top:62%!important;}
+  .editorial-global-energy .editorial-global-card .wired-woven-logo{width:46%!important;max-height:25%!important;top:62%!important;}
   .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
 }
+
 
 
 
