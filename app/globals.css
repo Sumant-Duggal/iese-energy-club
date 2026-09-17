@@ -1447,3 +1447,44 @@
   content:none!important;
   display:none!important;
 }
+
+/* Plain editorial cover copy: no label, no info card treatment. */
+.editorial-cover-copy>.editorial-benefits-block>span{
+  display:none!important;
+}
+.editorial-cover-copy>.editorial-info-card{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  color:var(--ink)!important;
+}
+.editorial-cover-copy>.editorial-info-card::before,
+.editorial-cover-copy>.editorial-info-card::after{
+  content:none!important;
+  display:none!important;
+}
+.editorial-cover-copy>.editorial-info-card h3,
+.editorial-cover-copy>.editorial-info-card p{
+  color:var(--ink)!important;
+  max-width:100%!important;
+}
+@media(min-width:901px){
+  .editorial-info-card{
+    left:56.8%!important;
+    top:43.5%!important;
+    width:34%!important;
+    height:auto!important;
+    display:block!important;
+  }
+  .editorial-info-card h3{
+    font-size:clamp(22px,2.35vw,36px)!important;
+    line-height:1!important;
+    margin:0 0 10px!important;
+  }
+  .editorial-info-card p{
+    font-size:clamp(13px,1.1vw,17px)!important;
+    line-height:1.22!important;
+  }
+}
