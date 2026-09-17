@@ -1596,16 +1596,19 @@
 .editorial-global-title{
   position:absolute!important;
   left:50%!important;
-  top:53%!important;
+  top:50%!important;
   transform:translate(-50%,-50%)!important;
   z-index:5!important;
-  color:#050403!important;
-  font-size:clamp(34px,5.4vw,82px)!important;
-  line-height:1!important;
-  letter-spacing:-.055em!important;
-  font-weight:400!important;
-  white-space:nowrap!important;
+  color:var(--cream)!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:clamp(58px,10.8vw,168px)!important;
+  line-height:.86!important;
+  letter-spacing:-.065em!important;
+  font-weight:700!important;
+  white-space:normal!important;
   text-align:center!important;
+  max-width:86%!important;
+  text-shadow:0 5px 18px rgba(0,0,0,.28)!important;
 }
 .editorial-global-card .wired-woven-logo{
   position:absolute!important;
@@ -1642,7 +1645,7 @@
   white-space:nowrap!important;
 }
 @media(max-width:900px){
-  .editorial-global-title{font-size:clamp(30px,8vw,58px)!important;top:52%!important;}
+  .editorial-global-title{font-size:clamp(46px,13vw,96px)!important;top:49%!important;}
   .editorial-global-card .wired-woven-logo{width:94%!important;top:66%!important;}
   .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
 }
