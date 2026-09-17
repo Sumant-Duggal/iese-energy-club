@@ -1613,10 +1613,10 @@
 .editorial-global-card .wired-woven-logo{
   position:absolute!important;
   left:50%!important;
-  top:68%!important;
+  top:61%!important;
   transform:translate(-50%,-50%)!important;
   z-index:6!important;
-  width:min(84%,930px)!important;
+  width:96%!important;
   height:auto!important;
   object-fit:contain!important;
   filter:drop-shadow(0 5px 7px rgba(0,0,0,.28))!important;
@@ -1646,8 +1646,9 @@
 }
 @media(max-width:900px){
   .editorial-global-title{font-size:clamp(30px,8.2vw,62px)!important;top:49%!important;}
-  .editorial-global-card .wired-woven-logo{width:94%!important;top:66%!important;}
+  .editorial-global-card .wired-woven-logo{width:92%!important;top:62%!important;}
   .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
 }
+
 
 
