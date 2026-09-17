@@ -1607,7 +1607,7 @@
   font-weight:700!important;
   white-space:nowrap!important;
   text-align:center!important;
-  max-width:min(36%,380px)!important;
+  max-width:96%!important;
   text-shadow:0 5px 18px rgba(0,0,0,.28)!important;
 }
 .editorial-global-card .wired-woven-logo{
@@ -1650,6 +1650,7 @@
   .editorial-global-card .wired-woven-logo{width:46%!important;max-height:25%!important;top:62%!important;}
   .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
 }
+
 
 
 
