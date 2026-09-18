@@ -1537,6 +1537,32 @@
     height:176px!important;
   }
 }
+.editorial-back-arrow{
+  position:absolute;
+  left:clamp(22px,4vw,58px);
+  top:clamp(84px,9vw,126px);
+  z-index:40;
+  width:44px;
+  height:44px;
+  border:2px solid var(--ink);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--ink);
+  display:grid;
+  place-items:center;
+  font-size:24px;
+  line-height:1;
+  box-shadow:8px 8px 0 var(--ink);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.editorial-back-arrow:hover,
+.editorial-back-arrow:focus-visible{
+  transform:translate(3px,3px);
+  box-shadow:4px 4px 0 var(--ink);
+}
+@media(max-width:700px){
+  .editorial-back-arrow{top:76px;width:38px;height:38px;font-size:21px;box-shadow:6px 6px 0 var(--ink)}
+}
 /* Editorial member CTA under WHY JOIN US headline. */
 .editorial-member-cta{
   position:absolute!important;
