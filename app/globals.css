@@ -1668,56 +1668,6 @@ body:has(.editorial-single-section){
   background:var(--paper);
   color:var(--ink);
 }
-
-.editorial-events-marquee{
-  position:absolute;
-  left:-4vw;
-  right:-4vw;
-  bottom:clamp(22px,4vh,46px);
-  z-index:18;
-  padding:clamp(10px,1.5vw,18px) 0;
-  background:#000;
-  color:var(--brick);
-  border-top:2px solid #000;
-  border-bottom:2px solid #000;
-  transform:skewY(-2deg);
-  overflow:hidden;
-  pointer-events:none;
-}
-.editorial-events-marquee-track{
-  display:flex;
-  width:max-content;
-  transform:skewY(2deg);
-  animation:editorial-event-marquee 18s linear infinite;
-}
-.editorial-events-marquee-track.reverse{
-  color:rgba(255,255,255,.8);
-  animation-direction:reverse;
-  animation-duration:24s;
-}
-.editorial-events-marquee-track span{
-  display:inline-block;
-  padding-right:.28em;
-  font-family:'Anton','Archivo Black',Impact,sans-serif;
-  font-size:clamp(34px,5.9vw,92px);
-  line-height:.9;
-  letter-spacing:-.04em;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-@keyframes editorial-event-marquee{
-  from{transform:translateX(0) skewY(2deg)}
-  to{transform:translateX(-50%) skewY(2deg)}
-}
-.editorial-global-energy .editorial-global-card{
-  transform:translateY(-8vh)!important;
-}
-@media(max-width:800px){
-  .editorial-events-marquee{bottom:18px}
-  .editorial-events-marquee-track span{font-size:clamp(28px,9vw,58px)}
-  .editorial-global-energy .editorial-global-card{transform:translateY(-7vh)!important}
-}
-
 /* Global Energy image page replacing the old section-break text page. */
 .editorial-global-energy{
   background:var(--brick)!important;
