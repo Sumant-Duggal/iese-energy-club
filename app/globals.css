@@ -1563,6 +1563,16 @@
 @media(max-width:700px){
   .editorial-back-arrow{top:76px;width:38px;height:38px;font-size:21px;box-shadow:6px 6px 0 var(--ink)}
 }
+.editorial-back-arrow-light{
+  background:var(--paper);
+  color:var(--ink);
+  border-color:var(--ink);
+  box-shadow:8px 8px 0 var(--ink);
+}
+.editorial-back-arrow-light:hover,
+.editorial-back-arrow-light:focus-visible{
+  box-shadow:4px 4px 0 var(--ink);
+}
 /* Editorial member CTA under WHY JOIN US headline. */
 .editorial-member-cta{
   position:absolute!important;
