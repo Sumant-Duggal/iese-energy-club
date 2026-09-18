@@ -1629,16 +1629,36 @@
   top:72%!important;
   transform:translateX(-50%)!important;
   z-index:7!important;
-  width:min(34%,460px)!important;
-  aspect-ratio:520/72!important;
-  background:url("/november-25-button.svg") center/contain no-repeat!important;
-  pointer-events:none!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  min-height:46px!important;
+  padding:0 22px!important;
+  border:2.5px solid #0E0E0E!important;
+  border-radius:999px!important;
+  background:#FFC93C!important;
+  color:#0E0E0E!important;
+  box-shadow:6px 6px 0 #0E0E0E!important;
+  font-family:"Bricolage Grotesque",Arial,sans-serif!important;
+  font-size:clamp(13px,1.25vw,20px)!important;
+  font-weight:800!important;
+  letter-spacing:-.025em!important;
+  white-space:nowrap!important;
+}
+.editorial-global-date svg{
+  width:18px!important;
+  height:18px!important;
+  flex:0 0 auto!important;
 }
 @media(max-width:900px){
   .editorial-global-title{font-size:clamp(30px,8.2vw,62px)!important;top:49%!important;}
   .editorial-global-card .wired-woven-logo{width:46%!important;max-height:25%!important;top:62%!important;}
-  .editorial-global-date{top:74%!important;width:58%!important;}
+  .editorial-global-date{top:74%!important;min-height:40px!important;padding:0 16px!important;font-size:12px!important;gap:7px!important;}
+  .editorial-global-date svg{width:15px!important;height:15px!important;}
 }
+
+
 
 
 
