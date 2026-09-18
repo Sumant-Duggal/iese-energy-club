@@ -1595,6 +1595,25 @@
   }
 }
 
+.editorial-team-page{
+  background:#050505!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:clamp(26px,4vw,56px)!important;
+  min-height:100svh!important;
+}
+.editorial-team-image{
+  width:min(94vw,1440px)!important;
+  height:auto!important;
+  max-height:86svh!important;
+  object-fit:contain!important;
+  border-radius:18px!important;
+  box-shadow:18px 18px 0 rgba(0,0,0,.65)!important;
+}
+.editorial-team-page .editorial-back-arrow{
+  background:var(--paper);
+  color:var(--ink);
+}
 /* Global Energy image page replacing the old section-break text page. */
 .editorial-global-energy{
   background:var(--brick)!important;
