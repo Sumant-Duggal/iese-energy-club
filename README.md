@@ -15,7 +15,7 @@ https://energy-design-replica.sumantduggal.chatgpt.site
 - CSS in `app/globals.css`
 - Static media in `public/`
 
-The app was built and hosted during design work with OpenAI Sites. The source is organized so it can be moved to GitHub and later migrated or deployed elsewhere.
+The app was initially prototyped with OpenAI Sites and has been updated to build as a standard Next.js app for Vercel deployment.
 
 ## Requirements
 
@@ -37,7 +37,7 @@ Then open the local URL printed by Vinext.
 npm run build
 ```
 
-The production build is emitted to `dist/`.
+The production build is emitted to `.next/`.
 
 ## Main files
 

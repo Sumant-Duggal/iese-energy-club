@@ -1,40 +1,42 @@
 # Deployment notes
 
-## Current build command
+## Vercel deployment
+
+This repository is now configured as a standard Next.js app for Vercel.
+
+Recommended Vercel settings:
+
+- Framework preset: `Next.js`
+- Install command: `npm install` or Vercel default
+- Build command: `npm run build`
+- Output directory: leave blank
+- Node.js version: `22.x` or newer
+
+## Local verification
 
 ```bash
+npm install
 npm run build
+npm run dev
 ```
 
-The build output is written to `dist/`.
+The build should produce a `.next/` folder.
 
-## Current hosting context
+## Routes
 
-This project was built from an OpenAI Sites / Vinext starter and currently includes `.openai/hosting.json` for the existing Sites deployment. That file is not a secret, but it is specific to the current Sites project.
+- `/` — homepage
+- `/editorial-join-us` — standalone Join Us view
+- `/editorial-team` — standalone Team view
+- `/editorial-events` — standalone Events view
+- `/editorial-system` — full editorial sequence
+- `/editorial-layout-lab` — internal layout lab
 
-## GitHub handoff
+## Notes
 
-Commit and push the `site/` folder as the repository root. Do not commit generated folders such as `dist/`, `.next/`, `.vinext/`, `.wrangler/`, local exports, or archive files.
+The project was originally prototyped from an OpenAI Sites/Vinext starter. The currently active deployment path for GitHub/Vercel is Next.js:
 
-## Vercel considerations
+- `package.json` uses `next dev`, `next build`, and `next start`.
+- `next` is included in dependencies.
+- Cloudflare/OpenAI Sites helper folders are excluded from Next type checking in `tsconfig.json`.
 
-This project is currently a Vinext/Vite app, not a standard Next.js app. A future Vercel deployment should be validated by the developer doing the Vercel handoff.
-
-Recommended path for Vercel:
-
-1. Import the GitHub repository into Vercel.
-2. Set Node.js to `22.x` or newer.
-3. Start by trying:
-   - Install command: `npm install`
-   - Build command: `npm run build`
-4. If Vercel does not recognize the Vinext server output, migrate the app shell to a standard Next.js project while preserving:
-   - `app/replica.tsx`
-   - `app/globals.css`
-   - `app/media.json`
-   - `public/` assets
-
-The visual work is concentrated in those files, so migration should be manageable if Vercel requires a standard Next.js runtime.
-
-## OpenAI Sites deployment
-
-If continuing with OpenAI Sites, use the existing `.openai/hosting.json` project id and the normal Sites publish flow.
+The OpenAI Sites metadata in `.openai/hosting.json` can remain in the repo for reference, but Vercel does not use it.
