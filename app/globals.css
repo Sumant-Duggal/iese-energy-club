@@ -101,7 +101,14 @@
 .hero-stage::after{background:#FF151E}
 .home-card-stage,.home-card-lime{background:#FF151E;color:white}
 .home-card-lime small{color:white}
-
+.home-card-lime .home-pill-nav,
+.home-card-lime .home-pill{
+  pointer-events:auto;
+}
+.home-card-lime .home-pill-nav{
+  position:relative;
+  z-index:10;
+}
 /* Manual controls for the card carousel */
 .card-controls{position:absolute;left:50%;bottom:max(26px,env(safe-area-inset-bottom));z-index:8;display:flex;gap:12px;transform:translateX(-50%);pointer-events:auto}
 .card-controls button{width:46px;height:46px;border-radius:999px;background:#fff;color:#0e0e0e;border:1px solid rgba(255,255,255,.5);box-shadow:0 16px 34px rgba(0,0,0,.28);font-size:22px;line-height:1;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
