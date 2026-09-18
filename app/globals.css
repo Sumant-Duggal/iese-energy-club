@@ -21,7 +21,7 @@
 /* Homepage frame-07 bridge: preserve original opening, then fade into the card workspace. */
 .home-card-transition{height:260svh;background:#000;position:relative;isolation:isolate}
 .home-card-stage{background:#000;color:white}
-.home-card-lime{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;text-align:center;background:var(--lime);color:var(--ink);opacity:clamp(0,calc(1 - var(--p)*2.2),1);transform:scale(calc(1 + var(--p)*.08));will-change:opacity,transform;pointer-events:none}
+.home-card-lime{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;text-align:center;background:var(--lime);color:var(--ink);opacity:clamp(0,calc(1 - var(--p)*2.2),1);transform:scale(calc(1 + var(--p)*.08));will-change:opacity,transform;pointer-events:none}
 .home-card-lime p{font-size:clamp(34px,4.8vw,82px);line-height:1.04;letter-spacing:-.065em;max-width:86vw}
 .home-card-lime small{font-size:14px;letter-spacing:-.02em}
 .home-card-layer{position:absolute;inset:0;z-index:2;opacity:clamp(0,calc((var(--p) - .18)*4),1);transform:translateY(calc((1 - clamp(0,calc((var(--p) - .18)*4),1))*8vh));will-change:opacity,transform}
@@ -109,7 +109,16 @@
   position:relative;
   z-index:10;
 }
-/* Manual controls for the card carousel */
+.home-explore-nav{
+  position:relative;
+  z-index:30;
+  pointer-events:auto;
+}
+.home-explore-cta.home-pill{
+  min-width:clamp(180px,17vw,250px)!important;
+  height:44px!important;
+  font-size:12px!important;
+}/* Manual controls for the card carousel */
 .card-controls{position:absolute;left:50%;bottom:max(26px,env(safe-area-inset-bottom));z-index:8;display:flex;gap:12px;transform:translateX(-50%);pointer-events:auto}
 .card-controls button{width:46px;height:46px;border-radius:999px;background:#fff;color:#0e0e0e;border:1px solid rgba(255,255,255,.5);box-shadow:0 16px 34px rgba(0,0,0,.28);font-size:22px;line-height:1;display:grid;place-items:center;transition:transform .2s ease,background .2s ease}
 .card-controls button:hover{transform:translateY(-2px);background:#FF151E;color:white}
