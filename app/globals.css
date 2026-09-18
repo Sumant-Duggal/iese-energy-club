@@ -18,6 +18,19 @@
 .lab-circles{position:absolute;z-index:4;right:7.1%;bottom:10.6%;display:flex;align-items:center}.lab-circles span{display:block;width:clamp(20px,6.8vw,28px);height:clamp(20px,6.8vw,28px);border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.2);backdrop-filter:blur(1px)}.lab-circles span+span{margin-left:-12px;background:rgba(255,255,255,.36)}.lab-details{position:absolute;z-index:4;left:7.1%;bottom:10.2%;display:grid;gap:4px;font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;color:#fff}.lab-number{font-size:clamp(9px,2.8vw,12px);font-weight:520;letter-spacing:.14em}.lab-meta{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.72);font-size:clamp(7px,2.1vw,9px);font-weight:520;letter-spacing:.05em;text-transform:uppercase}.lab-meta b{color:rgba(255,255,255,.42);font-weight:300}
 @media(prefers-reduced-motion:reduce){.lab-card{transition:transform .6s ease}}
 
+.lab-link-card{
+  cursor:pointer;
+  pointer-events:auto;
+}
+.lab-link-card:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:8px;
+}
+.card-cylinder-page .card-camera{
+  pointer-events:auto;
+}
+
+
 /* Homepage frame-07 bridge: preserve original opening, then fade into the card workspace. */
 .home-card-transition{height:260svh;background:#000;position:relative;isolation:isolate}
 .home-card-stage{background:#000;color:white}
