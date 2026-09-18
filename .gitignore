@@ -39,3 +39,11 @@ yarn-error.log*
 /outputs/
 /work/
 *.tsbuildinfo
+
+# local handoff / export artifacts
+/editorial-system-export/
+/extracted-assets/
+/tmp/
+*.tar.gz
+# generated local build/runtime folders
+/build/
