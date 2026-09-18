@@ -1615,6 +1615,18 @@
 .editorial-back-arrow-light:focus-visible{
   box-shadow:4px 4px 0 var(--ink);
 }
+
+.editorial-single-section{
+  height:100svh;
+  overflow:hidden;
+}
+.editorial-single-section .editorial-slide{
+  min-height:100svh!important;
+}
+body:has(.editorial-single-section){
+  overflow:hidden;
+}
+
 /* Editorial member CTA under WHY JOIN US headline. */
 .editorial-member-cta{
   position:absolute!important;
