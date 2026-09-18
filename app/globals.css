@@ -1626,30 +1626,21 @@
 .editorial-global-date{
   position:absolute!important;
   left:50%!important;
-  bottom:clamp(18px,3vh,34px)!important;
+  top:72%!important;
   transform:translateX(-50%)!important;
   z-index:7!important;
-  min-height:48px!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  gap:12px!important;
-  padding:0 28px!important;
-  border:2px solid var(--ink)!important;
-  border-radius:999px!important;
-  background:#ffc93d!important;
-  color:#050403!important;
-  box-shadow:8px 8px 0 rgba(0,0,0,.95)!important;
-  font-size:clamp(15px,1.45vw,24px)!important;
-  font-weight:800!important;
-  letter-spacing:-.025em!important;
-  white-space:nowrap!important;
+  width:min(34%,460px)!important;
+  aspect-ratio:520/72!important;
+  background:url("/november-25-button.svg") center/contain no-repeat!important;
+  pointer-events:none!important;
 }
 @media(max-width:900px){
   .editorial-global-title{font-size:clamp(30px,8.2vw,62px)!important;top:49%!important;}
   .editorial-global-card .wired-woven-logo{width:46%!important;max-height:25%!important;top:62%!important;}
-  .editorial-global-date{font-size:13px!important;min-height:42px!important;padding:0 16px!important;bottom:18px!important;}
+  .editorial-global-date{top:74%!important;width:58%!important;}
 }
+
+
 
 
 
